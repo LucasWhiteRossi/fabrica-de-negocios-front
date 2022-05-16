@@ -1,3 +1,11 @@
+import { Navbar } from "../../components/Navbar";
+
 export function Home() {
-  return <h1>Tamo na home!</h1>;
+  return (
+    <>
+      <Navbar/>
+      <h1>Tamo na home!</h1>
+    </>
+  
+  );
 }

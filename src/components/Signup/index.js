@@ -11,35 +11,15 @@ export function Signup() {
     confirmPassword: "",
   });
 
-  const [img, setImg] = useState("");
-
   function handleChange(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
-  }
-
-  function handleImage(e) {
-    setImg(e.target.files[0]);
-  }
-
-  async function handleUpload() {
-    try {
-      const uploadData = new FormData();
-      uploadData.append("picture", img);
-
-      const response = await api.post("/upload-image", uploadData);
-
-      return response.data.url;
-    } catch (error) {
-      console.log(error);
-    }
   }
 
   async function handleSubmit(e) {
     e.preventDefault();
 
     try {
-      const imgURL = await handleUpload();
-      await api.post("/user/signup", { ...form, img: imgURL });
+      await api.post("/user/signup", { ...form });
 
       navigate("/login");
     } catch (error) {
@@ -57,8 +37,6 @@ export function Signup() {
         value={form.name}
         onChange={handleChange}
       />
-      <label htmlFor="formImg">Sua foto de perfil:</label>
-      <input type="file" id="formImg" onChange={handleImage} />
 
       <label htmlFor="formEmail">E-mail:</label>
       <input
