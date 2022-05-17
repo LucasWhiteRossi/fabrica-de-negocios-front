@@ -26,7 +26,8 @@ export function Login() {
 
       localStorage.setItem("loggedInUser", JSON.stringify(response.data));
 
-      navigate("/profile");
+      //navigate("/profile");
+      navigate("/como-utilizar");
     } catch (error) {
       console.log(error);
     }

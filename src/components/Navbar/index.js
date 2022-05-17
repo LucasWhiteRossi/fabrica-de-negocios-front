@@ -24,7 +24,7 @@ export function Navbar() {
         <Link class="btn btn-outline-danger m-2" to="/acesso">ENTRAR</Link>
         <Link class="btn btn-outline-danger m-2" to="/como-utilizar">SOLUÇÕES</Link>
     </div>)}
-    {!loggedInUser &&(
+    {loggedInUser &&(
     <div class="nav-items">
         <Link class="btn btn-outline-danger m-2" to="/">MODELO DE NEGÓCIOS</Link>
         <Link class="btn btn-outline-danger m-2" to="/">PERSONAS</Link>
@@ -42,17 +42,17 @@ export function Navbar() {
             <Dropdown.Divider />
 
             <DropdownItem>
-              <Link  to="/" style={{'textDecoration':'none', 'color':'red'}}>+ CRIAR MODELO DE NEGÓCIOS</Link>
+              <Link  to="/cadastro-modelo-negocio" style={{'textDecoration':'none', 'color':'red'}}>+ CRIAR MODELO DE NEGÓCIOS</Link>
             </DropdownItem>
 
             <DropdownItem >
-              <Link  to="/" style={{'textDecoration':'none', 'color':'red'}}>+ CRIAR PERSONAS</Link>
+              <Link  to="/cadastro-persona" style={{'textDecoration':'none', 'color':'red'}}>+ CRIAR PERSONAS</Link>
             </DropdownItem>
 
             <Dropdown.Divider />
             
             <DropdownItem>
-              <Link  to="/" style={{'textDecoration':'none', 'color':'black'}}>SAIR</Link>
+              <Link  to="/" style={{'textDecoration':'none', 'color':'black'}}>ÁREA DO USUÁRIO</Link>
             </DropdownItem>
 
         </DropdownButton>
