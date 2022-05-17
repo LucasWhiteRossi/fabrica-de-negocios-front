@@ -7,6 +7,7 @@ import { ComoUtilizar } from "./pages/ComoUtilizar";
 import { ErrorPage } from "./pages/ErrorPage";
 
 import { ProtectedRoute } from "./components/ProtectedRoute";
+import { CadastroModeloNegocio } from "./pages/CadastroModeloNegocio";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           />
 
           <Route path="*" element={<ErrorPage />} />
+          <Route path="/cadastro-modelo-negocio" element={<CadastroModeloNegocio />} />
         </Routes>
       </AuthContextComponent>
     </>
