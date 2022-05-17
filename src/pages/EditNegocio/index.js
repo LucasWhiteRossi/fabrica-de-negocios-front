@@ -3,7 +3,7 @@ import { Navbar } from '../../components/Navbar';
 import { api } from "../../api/api"
 import { useNavigate, useParams } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
-import axios from 'axios';
+
 
 export function EditNegocio(){
 
