@@ -8,6 +8,7 @@ export function CadastroModeloNegocio(){
 const navigate = useNavigate();
 
 const [form, setForm] = useState({
+    nome: "",
     beneficio: "",
     solucao: "",
     produtos: "",
@@ -60,6 +61,18 @@ function handleConfirm(event){
         <h1 className="text-center" style={{color:"white"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
 
         <form onSubmit={handleConfirm}>
+
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome do seu Negócio</label>
+                <input 
+                type="text" 
+                className="form-control" 
+                id="nome" 
+                value={form.nome}
+                name="nome"
+                onChange={handleChange} 
+                />
+            </div>
 
             <br></br>
             <h2 className="text-center" style={{color:"#631354"}}>Proposta de valor:</h2>
