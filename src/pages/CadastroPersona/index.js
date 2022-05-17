@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { AvatarSelector } from '../../components/AvatarSelector';
 
 
-export function Cadastro(){
+export function CadastroPersona(){
 
 const navigate = useNavigate();
 
