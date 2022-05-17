@@ -40,7 +40,7 @@ export function EditPersona(){
 
     useEffect(() => {
         async function fetchEdit() {
-            const response = await axios.get(
+            const response = await api.get(
             `https://ironrest.herokuapp.com/fabricapersona/${params.id}`      
             );
             setData({...response.data});
@@ -63,7 +63,7 @@ function handleConfirm(event){
     const editObj = {...form};
     delete editObj._id;
 
-    axios.put(`https://ironrest.herokuapp.com/fabricapersona/${params.id}`, editObj);
+    api.put(`https://ironrest.herokuapp.com/fabricapersona/${params.id}`, editObj);
     navigate("/personas");
 }
 
