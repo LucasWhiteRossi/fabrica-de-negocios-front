@@ -19,7 +19,7 @@ export function CardsPersonas(){
     
     
     useEffect(() => {
-         setPersona(data);
+        setPersona(data);
     },[data]);
 
     async function handleDelete(id) {
@@ -42,9 +42,13 @@ export function CardsPersonas(){
             <>
             <div className="d-flex justify-content-center align-items-center">
                 <div className="d-flex justify-content-start rounded m-2" style={{width: "48rem", backgroundColor:"rgba(255,255,255,0.7)", borderRadius: "30px"}} >
-                    <div className='d-flex justify-content-start align-items-center rounded p-5' >
-                        <img className="rounded" style={{width:"0.5el", height:"auto"}} src={require(`../../assets/avatars/${currentPersona.imagem}.jpg`)} alt={`${currentPersona.imagem}.jpg`}/>
-                    </div>
+                    {
+                        currentPersona.imagem && (
+                            <div className='d-flex justify-content-start align-items-center rounded p-5' >
+                                <img className="rounded" style={{width:"0.5el", height:"auto"}} src={require(`../../assets/avatars/${currentPersona.imagem}.jpg`)} alt={`${currentPersona.imagem}.jpg`}/>
+                            </div>
+                        )
+                    }
                     <div className="d-flex align-items-center justify-content-center p-5">
                         <div>
                             <h5 className="card-title" style={{color:"#631354"}}>{currentPersona.nome}</h5>
