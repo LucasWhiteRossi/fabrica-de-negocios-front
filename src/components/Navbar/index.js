@@ -36,7 +36,7 @@ export function Navbar() {
             </DropdownItem>
 
             <DropdownItem>
-              <Link  to="/" style={{'textDecoration':'none', 'color':'red'}}>GERENCIAR PERSONAS</Link>
+              <Link  to="/gerenciar-personas" style={{'textDecoration':'none', 'color':'red'}}>GERENCIAR PERSONAS</Link>
             </DropdownItem>
 
             <Dropdown.Divider />
@@ -52,7 +52,7 @@ export function Navbar() {
             <Dropdown.Divider />
             
             <DropdownItem>
-              <Link  to="/" style={{'textDecoration':'none', 'color':'black'}}>ÁREA DO USUÁRIO</Link>
+              <Link  to="/profile" style={{'textDecoration':'none', 'color':'black'}}>ÁREA DO USUÁRIO</Link>
             </DropdownItem>
 
         </DropdownButton>

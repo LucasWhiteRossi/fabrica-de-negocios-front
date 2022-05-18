@@ -8,6 +8,8 @@ import { ErrorPage } from "./pages/ErrorPage";
 
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { CadastroModeloNegocio } from "./pages/CadastroModeloNegocio";
+import { CadastroPersona } from "./pages/CadastroPersona";
+import { Personas } from './pages/Personas'
 
 function App() {
   return (
@@ -23,6 +25,8 @@ function App() {
           />
 
           <Route path="*" element={<ErrorPage />} />
+          <Route path="/gerenciar-personas" element={<Personas />} />
+          <Route path="/cadastro-persona" element={<CadastroPersona />} />
           <Route path="/cadastro-modelo-negocio" element={<CadastroModeloNegocio />} />
         </Routes>
       </AuthContextComponent>
