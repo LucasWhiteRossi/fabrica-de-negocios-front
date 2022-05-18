@@ -6,8 +6,12 @@ export function Acesso(){
     return (
         <>
             <Navbar/>
-            <Login/>
-            <Signup/>
+            
+            <div className="d-flex flex-row justify-content-around m-5">
+                <Signup/>
+                <Login/>
+            </div>
+            
         </>
         
     )

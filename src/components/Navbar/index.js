@@ -26,13 +26,13 @@ export function Navbar() {
     </div>)}
     {loggedInUser &&(
     <div class="nav-items">
-        <Link class="btn btn-outline-danger m-2" to="/">MODELO DE NEGÓCIOS</Link>
-        <Link class="btn btn-outline-danger m-2" to="/">PERSONAS</Link>
+        <Link class="btn btn-outline-danger m-2" to="/gerenciar-modelo-de-negocio">MODELO DE NEGÓCIOS</Link>
+        <Link class="btn btn-outline-danger m-2" to="/gerenciar-personas">PERSONAS</Link>
         <Link class="btn btn-outline-danger m-2" to="/como-utilizar">SOLUÇÕES</Link>
         <DropdownButton id="dropdown" title="MENU" variant="warning" className="m-2">
 
             <DropdownItem>
-              <Link  to="/" style={{'textDecoration':'none', 'color':'red'}}>GERENCIAR MODELO DE NEGÓCIOS</Link>
+              <Link  to="/gerenciar-modelo-de-negocio" style={{'textDecoration':'none', 'color':'red'}}>GERENCIAR MODELO DE NEGÓCIOS</Link>
             </DropdownItem>
 
             <DropdownItem>
