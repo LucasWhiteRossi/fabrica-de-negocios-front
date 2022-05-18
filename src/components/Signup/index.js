@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { api } from "../../api/api";
 import { useNavigate } from "react-router-dom";
+import { InfoCard } from "../InfoCard";
 
 export function Signup() {
   const navigate = useNavigate();
@@ -28,41 +29,58 @@ export function Signup() {
   }
 
   return (
+    <InfoCard title="Criar Conta">
     <form onSubmit={handleSubmit}>
-      <label htmlFor="formName">Nome:</label>
-      <input
-        id="formName"
-        name="name"
-        type="text"
-        value={form.name}
-        onChange={handleChange}
-      />
-
-      <label htmlFor="formEmail">E-mail:</label>
+      <div className="mb-3">
+        <label className="form-label" htmlFor="formName">Nome:</label>
+        <input
+          id="formName"
+          name="name"
+          type="text"
+          className="form-control"
+          value={form.name}
+          onChange={handleChange}
+        />
+      </div>
+      
+      <div className="mb-3">
+      <label className="form-label" htmlFor="formEmail">E-mail:</label>
       <input
         id="formEmail"
         name="email"
         type="email"
+        className="form-control"
         value={form.email}
         onChange={handleChange}
       />
-      <label htmlFor="formPassword">Senha:</label>
+      </div>
+      
+      <div className="mb-3">
+      <label className="form-label" htmlFor="formPassword">Senha:</label>
       <input
         id="formPassword"
         name="password"
         type="password"
+        className="form-control"
         value={form.password}
         onChange={handleChange}
       />
-      <label htmlFor="formConfirmPassword">Confirmação de senha</label>
+      </div>
+
+      <div className="mb-3">
+      <label className="form-label" htmlFor="formConfirmPassword">Confirmação de senha</label>
       <input
         id="formConfirmPassword"
         type="password"
         name="confirmPassword"
+        className="form-control"
         value={form.confirmPassword}
         onChange={handleChange}
       />
-      <button type="submit">Cadastrar</button>
+      </div>
+
+      <button className="btn btn-primary m-2" type="submit">Cadastrar</button>
     </form>
+    </InfoCard>
   );
 }
