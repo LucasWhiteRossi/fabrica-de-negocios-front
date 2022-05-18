@@ -8,6 +8,7 @@ import { ErrorPage } from "./pages/ErrorPage";
 
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { CadastroModeloNegocio } from "./pages/CadastroModeloNegocio";
+import { ModeloNegocio } from "./pages/ModeloNegocio";
 import { CadastroPersona } from "./pages/CadastroPersona";
 import { Personas } from './pages/Personas'
 
@@ -26,6 +27,7 @@ function App() {
 
           <Route path="*" element={<ErrorPage />} />
           <Route path="/gerenciar-personas" element={<Personas />} />
+          <Route path="/gerenciar-modelo-de-negocio" element={<ModeloNegocio />} />
           <Route path="/cadastro-persona" element={<CadastroPersona />} />
           <Route path="/cadastro-modelo-negocio" element={<CadastroModeloNegocio />} />
         </Routes>

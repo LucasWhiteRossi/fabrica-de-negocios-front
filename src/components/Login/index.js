@@ -2,6 +2,7 @@ import { useState, useContext } from "react";
 import { AuthContext } from "../../contexts/authContext";
 import { api } from "../../api/api";
 import { useNavigate } from "react-router-dom";
+import { InfoCard } from "../InfoCard";
 
 export function Login() {
   const [form, setForm] = useState({
@@ -34,22 +35,36 @@ export function Login() {
   }
 
   return (
+    <>
+    <InfoCard title="Login">
     <form onSubmit={handleSumit}>
-      <label>Email:</label>
-      <input
-        type="email"
-        name="email"
-        value={form.email}
-        onChange={handleChange}
-      />
-      <label>Senha:</label>
+    <div className="mb-3">
+        <label className="form-label">Email:</label>
+        <input
+          type="email"
+          name="email"
+          className="form-control"
+          value={form.email}
+          onChange={handleChange}
+        />        
+      </div> 
+      
+      <div className="mb-3">
+      <label className="form-label">Senha:</label>
       <input
         type="password"
         name="password"
+        className="form-control"
         value={form.password}
         onChange={handleChange}
       />
-      <button type="submit">Entrar!</button>
+
+      <button className="btn btn-primary m-2" type="submit">Entrar!</button>
+      
+      </div>
     </form>
+    </InfoCard>
+    </>
   );
 }
+
