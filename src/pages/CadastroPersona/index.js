@@ -118,8 +118,7 @@ async function handleConfirm(event){
                 name="declarado"
                 onChange={handleChange} 
                 >
-                <option selected>Selecione...</option>
-                <option value="">""</option>
+                <option selected value="">Selecione...</option>
                 <option value="Heterossexual">Heterosexual</option>
                 <option value="Lésbica">Lésbica</option>
                 <option value="Gay">Gay</option>
@@ -234,8 +233,7 @@ async function handleConfirm(event){
                 name="renda"
                 onChange={handleChange} 
                 >
-                <option selected>Selecione...</option>
-                <option value="">""</option>
+                <option selected value="">Selecione...</option>
                 <option value="Não possui renda">Não possui renda</option>
                 <option value="Até R$ 1.500,00">Até R$ 1.500,00</option>
                 <option value="De R$ 1.500,00 até R$ 5.000,00">De R$ 1.500,00 até R$ 5.000,00</option>
@@ -271,8 +269,7 @@ async function handleConfirm(event){
                 name="local-compras"
                 onChange={handleChange} 
                 >
-                <option selected>Selecione...</option>
-                <option value="">""</option>
+                <option selected value="">Selecione...</option>
                 <option value="Loja virtual">Loja virtual</option>
                 <option value="Loja física">Loja física</option>
             </select>
@@ -390,7 +387,7 @@ async function handleConfirm(event){
             <br></br>
             <div className="mb-3">
                 <label for="papel-personaCadastro" className="form-label">Qual o papel da persona no processo de compra? Ela é a <strong>tomadora de decisão</strong>? Ou ela é quem <strong>comunica a necessidade</strong>? Neste caso, quem toma a decisão por ela?</label>
-                <input 
+                <input
                 type="text" 
                 className="form-control" 
                 id="papel-personaCadastro" 

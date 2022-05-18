@@ -5,7 +5,7 @@ import { Navbar } from '../../components/Navbar';
 
 
 export function CardsPersonas(){
-   
+
     const [data, setData] = useState([]);
     const [persona, setPersona] = useState([]);
     const [isLoading, setIsLoading] = useState(true);

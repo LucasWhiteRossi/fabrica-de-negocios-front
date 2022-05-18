@@ -122,8 +122,8 @@ function handleConfirm(event){
                 name="declarado"
                 onChange={handleChange} 
                 >
-                <option selected>Selecione...</option>
-                <option value="Heterosexual">Heterosexual</option>
+                <option value="">Selecione...</option>
+                <option value="Heterossexual">Heterosexual</option>
                 <option value="Lésbica">Lésbica</option>
                 <option value="Gay">Gay</option>
                 <option value="Bissexual">Bissexual</option>
@@ -236,11 +236,11 @@ function handleConfirm(event){
                 name="renda"
                 onChange={handleChange} 
                 >
-                <option selected>Selecione...</option>
+                <option value="">Selecione...</option>
                 <option value="Não possui renda">Não possui renda</option>
                 <option value="Até R$ 1.500,00">Até R$ 1.500,00</option>
                 <option value="De R$ 1.500,00 até R$ 5.000,00">De R$ 1.500,00 até R$ 5.000,00</option>
-                <option value="De R$ 5.000,00 até R$ 10.000,00">De R$ 5.000,00 até R$ 10.000,00</option>
+                <option value="De R$ 5.000,00 até R$10.000,00">De R$ 5.000,00 até R$ 10.000,00</option>
                 <option value="Acima de R$ 10.000,00">Acima de R$ 10.000,00</option>
             </select>
             </div>
@@ -272,7 +272,7 @@ function handleConfirm(event){
                 name="local-compras"
                 onChange={handleChange} 
                 >
-                <option selected>Selecione...</option>
+                <option value="">Selecione...</option>
                 <option value="Loja virtual">Loja virtual</option>
                 <option value="Loja física">Loja física</option>
             </select>
