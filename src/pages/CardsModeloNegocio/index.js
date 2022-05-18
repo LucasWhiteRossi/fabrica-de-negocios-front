@@ -11,7 +11,7 @@ export function CardsModeloNegocio(){
 
     useEffect(() => {
         async function fetchData(){
-            const response = await api.get('/modelo-negocio')
+            const response = await api.get('/modelo-negocio/negocios')
             setData(response.data);
         }
         fetchData()
@@ -24,7 +24,7 @@ export function CardsModeloNegocio(){
 
     async function handleDelete(id) {
         await api.delete(
-        `/modelo-negocio/${id}`
+        `/modelo-negocio/deletar-negocio/${id}`
         );
         let deletado = negocio.filter((obj) => {
             return obj._id !== id 
@@ -49,8 +49,8 @@ export function CardsModeloNegocio(){
                             <p className="card-text">{currentNegocio.beneficio.length<300?`${currentNegocio.beneficio}`:`${currentNegocio.beneficio.slice(0,300)} ...`}</p>
                             <p className="card-text">{currentNegocio.solucao.length<300?`${currentNegocio.solucao}`:`${currentNegocio.solucao.slice(0,300)} ...`}</p>
                             <p className="card-text">{currentNegocio.solucaoValor.length<300?`${currentNegocio.solucaoValor}`:`${currentNegocio.solucaoValor.slice(0,300)} ...`}</p>
-                            <Link to={`/impressao-negocio/${currentNegocio._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Visualizar</Link>
-                            <Link to={`/modelo-negocio/${currentNegocio._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Editar</Link>
+                            <Link to={`/visualizacao-negocio/${currentNegocio._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Visualizar</Link>
+                            <Link to={`/edit-modelo-negocio/${currentNegocio._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Editar</Link>
                             <button className="btn btn-danger m-2" onClick={()=>handleDelete(currentNegocio._id)}>Apagar</button>
                         </div>
                     </div>

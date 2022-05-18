@@ -35,10 +35,10 @@ function App() {
           <Route path="/gerenciar-negocio" element={<CardsModeloNegocio />} />
           <Route path="/cadastro-persona" element={<CadastroPersona />} />
           <Route path="/cadastro-modelo-negocio" element={<CadastroModeloNegocio />} />
-          <Route path="/edit-modelo-negocio" element={<EditNegocio />} />
-          <Route path="/edit-persona" element={<EditPersona />} />
-          <Route path="/visualizacao-negocio" element={<VisualizacaoModeloNegocio />} />
-          <Route path="/visualizacao-persona" element={<VisualizacaoPersona />} />
+          <Route path="/edit-modelo-negocio/:id" element={<EditNegocio />} />
+          <Route path="/edit-persona/:id" element={<EditPersona />} />
+          <Route path="/visualizacao-negocio/:id" element={<VisualizacaoModeloNegocio />} />
+          <Route path="/visualizacao-persona/:id" element={<VisualizacaoPersona />} />
 
 
         </Routes>

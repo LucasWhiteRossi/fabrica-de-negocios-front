@@ -41,7 +41,7 @@ export function EditPersona(){
     useEffect(() => {
         async function fetchEdit() {
             const response = await api.get(
-            `/cadastro-persona/${params.id}`      
+            `/persona/personas/${params.id}`      
             );
             setData({...response.data});
         }
@@ -63,8 +63,8 @@ function handleConfirm(event){
     const editObj = {...form};
     delete editObj._id;
 
-    api.put(`/cadastro-persona${params.id}`, editObj);
-    navigate("/personas");
+    api.put(`/persona/editar-persona/${params.id}`, editObj);
+    navigate("/gerenciar-personas");
 }
 
     return (

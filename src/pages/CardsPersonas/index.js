@@ -11,7 +11,7 @@ export function CardsPersonas(){
 
     useEffect(() => {
         async function fetchData(){
-            const response = await api.get('/cadastro-persona')
+            const response = await api.get('/persona/personas')
             setData(response.data);
         }
         fetchData()
@@ -24,7 +24,7 @@ export function CardsPersonas(){
 
     async function handleDelete(id) {
         await api.delete(
-        `/cadastro-persona${id}`
+        `/persona/deletar-persona/${id}`
         );
         let deletado = persona.filter((obj) => {
             return obj._id !== id 
@@ -50,8 +50,8 @@ export function CardsPersonas(){
                             <h5 className="card-title" style={{color:"#631354"}}>{currentPersona.nome}</h5>
                             <h6 className="card-subtitle mb-2 text-muted">{currentPersona.idade}</h6>
                             <p className="card-text">{currentPersona.historia.length<300?`${currentPersona.historia}`:`${currentPersona.historia.slice(0,300)} ...`}</p>
-                            <Link to={`/impressao/${currentPersona._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Visualizar</Link>
-                            <Link to={`/personas/${currentPersona._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Editar</Link>
+                            <Link to={`/visualizacao-persona/${currentPersona._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Visualizar</Link>
+                            <Link to={`/edit-persona/${currentPersona._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Editar</Link>
                             <button className="btn btn-danger m-2" onClick={()=>handleDelete(currentPersona._id)}>Apagar</button>
                         </div>
                     </div>

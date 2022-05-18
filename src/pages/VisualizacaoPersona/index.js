@@ -37,7 +37,7 @@ export function VisualizacaoPersona(){
 
     useEffect(() => {
         async function fetchData(){
-            const response = await api.get(`/cadastro-persona${params.id}`)
+            const response = await api.get(`/persona/personas/${params.id}`)
             setData(response.data);
         }
         fetchData()
