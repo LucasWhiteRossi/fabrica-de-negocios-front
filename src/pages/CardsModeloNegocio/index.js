@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Navbar } from '../../components/Navbar';
 
 
-export function ModeloNegocio(){
+export function CardsModeloNegocio(){
    
     const [data, setData] = useState([]);
     const [negocio, setNegocio] = useState([]);
