@@ -43,7 +43,7 @@ export function VisualizacaoModeloNegocio(){
 
     useEffect(() => {
         async function fetchData(){
-            const response = await api.get(`/cadastro-modelo-negocio${params.id}`)
+            const response = await api.get(`/modelo-negocio/negocios/${params.id}`)
             setData(response.data);
         }
         fetchData()

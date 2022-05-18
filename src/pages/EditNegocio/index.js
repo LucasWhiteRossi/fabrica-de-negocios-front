@@ -46,7 +46,7 @@ export function EditNegocio(){
     useEffect(() => {
         async function fetchEdit() {
             const response = await api.get(
-            `/cadastro-modelo-negocio/${params.id}`
+            `/modelo-negocio/negocios/${params.id}`
             );
             setData({...response.data});
         }
@@ -68,8 +68,8 @@ export function EditNegocio(){
         const editObj = {...form};
         delete editObj._id;
     
-        api.put(`/cadastro-modelo-negocio/${params.id}`, editObj);
-        navigate("/");
+        api.put(`/modelo-negocio/editar-negocio/${params.id}`, editObj);
+        navigate("/gerenciar-negocio");
          
         }
     

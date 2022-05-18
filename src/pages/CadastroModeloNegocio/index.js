@@ -47,8 +47,8 @@ function handleChange(event){
 function handleConfirm(event){
     event.preventDefault();
     try {
-    api.post("/cadastro-modelo-negocio", form);
-    navigate("/");
+    api.post("/modelo-negocio/criar-negocio", form);
+    navigate("/gerenciar-negocio");
      } catch (err) {
         console.log(err);
      }

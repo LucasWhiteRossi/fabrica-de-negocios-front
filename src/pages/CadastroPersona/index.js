@@ -42,8 +42,8 @@ function handleChange(event){
 
 function handleConfirm(){
 
-    axios.post("/cadastro-persona", form);
-    navigate("/personas");
+    axios.post("/persona/criar-persona", form);
+    navigate("/gerenciar-personas");
 }
 
     return (
