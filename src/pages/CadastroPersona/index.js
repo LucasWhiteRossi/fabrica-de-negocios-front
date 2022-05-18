@@ -38,12 +38,14 @@ const [form, setForm] = useState({
 
 function handleChange(event){
     setForm({...form,[event.target.name]: event.target.value});
+    console.log(form);
 }
 
-function handleConfirm(event){
+async function handleConfirm(event){
     event.preventDefault();
+    console.log(form);
     try{
-        api.post("/persona/criar-persona", form);
+        await api.post("/persona/criar-persona", form);
         navigate("/gerenciar-personas");
     } catch(error){
         console.log(error)

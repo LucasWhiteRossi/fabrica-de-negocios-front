@@ -42,17 +42,18 @@ const [form, setForm] = useState({
 
 function handleChange(event){
     setForm({...form,[event.target.name]: event.target.value});
+    console.log(form);
 }
 
-function handleConfirm(event){
+async function handleConfirm(event){
     event.preventDefault();
     try {
-    api.post("/modelo-negocio/criar-negocio", form);
-    navigate("/gerenciar-negocio");
-     } catch (err) {
+        await api.post("/modelo-negocio/criar-negocio", form);
+        navigate("/gerenciar-negocio");
+    } catch (err) {
         console.log(err);
-     }
     }
+}
 
     return (
         <>
@@ -505,7 +506,7 @@ function handleConfirm(event){
                 <button type="submit" className="btn btn-primary">Gerar Negócio</button>
             
             </form>
-           </div> 
+            </div> 
         </>
     )
 }
