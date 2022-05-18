@@ -8,7 +8,7 @@ import { ErrorPage } from "./pages/ErrorPage";
 
 import { ProtectedRoute } from "./components/ProtectedRoute";
 import { CadastroModeloNegocio } from "./pages/CadastroModeloNegocio";
-import { CadastroPersona } from "./pages/CadastroModeloNegocio";
+import { CadastroPersona } from "./pages/CadastroPersona";
 import { Personas } from './pages/Personas'
 
 function App() {
