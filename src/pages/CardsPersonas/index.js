@@ -8,6 +8,7 @@ export function CardsPersonas(){
    
     const [data, setData] = useState([]);
     const [persona, setPersona] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         async function fetchData(){
@@ -20,6 +21,7 @@ export function CardsPersonas(){
     
     useEffect(() => {
         setPersona(data);
+        setIsLoading(false);
     },[data]);
 
     async function handleDelete(id) {
@@ -35,7 +37,9 @@ export function CardsPersonas(){
     return (
         <>
         <Navbar />
-        <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
+        {!isLoading && (
+        <>
+                    <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
         <h1 className="text-center" style={{color:"white"}}>PERSONAS CONSTRUÍDAS</h1>
         {persona.map((currentPersona) => {
             return (
@@ -43,7 +47,7 @@ export function CardsPersonas(){
             <div className="d-flex justify-content-center align-items-center">
                 <div className="d-flex justify-content-start rounded m-2" style={{width: "48rem", backgroundColor:"rgba(255,255,255,0.7)", borderRadius: "30px"}} >
                     {
-                        currentPersona.imagem && (
+                        currentPersona.imagem!=="" && (
                             <div className='d-flex justify-content-start align-items-center rounded p-5' >
                                 <img className="rounded" style={{width:"0.5el", height:"auto"}} src={require(`../../assets/avatars/${currentPersona.imagem}.jpg`)} alt={`${currentPersona.imagem}.jpg`}/>
                             </div>
@@ -65,6 +69,12 @@ export function CardsPersonas(){
         ) 
         })}
         </div>
+        </>
+
+        )}
+        { 
+        isLoading && <h1>Carregando</h1>
+        }
         </>
     );
 }
