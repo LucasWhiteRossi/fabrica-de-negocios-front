@@ -119,7 +119,8 @@ async function handleConfirm(event){
                 onChange={handleChange} 
                 >
                 <option selected>Selecione...</option>
-                <option value="Heterosexual">Heterosexual</option>
+                <option value="">""</option>
+                <option value="Heterossexual">Heterosexual</option>
                 <option value="Lésbica">Lésbica</option>
                 <option value="Gay">Gay</option>
                 <option value="Bissexual">Bissexual</option>
@@ -234,10 +235,11 @@ async function handleConfirm(event){
                 onChange={handleChange} 
                 >
                 <option selected>Selecione...</option>
+                <option value="">""</option>
                 <option value="Não possui renda">Não possui renda</option>
                 <option value="Até R$ 1.500,00">Até R$ 1.500,00</option>
                 <option value="De R$ 1.500,00 até R$ 5.000,00">De R$ 1.500,00 até R$ 5.000,00</option>
-                <option value="De R$ 5.000,00 até R$ 10.000,00">De R$ 5.000,00 até R$ 10.000,00</option>
+                <option value="De R$ 5.000,00 até R$10.000,00">De R$ 5.000,00 até R$ 10.000,00</option>
                 <option value="Acima de R$ 10.000,00">Acima de R$ 10.000,00</option>
             </select>
             </div>
@@ -270,6 +272,7 @@ async function handleConfirm(event){
                 onChange={handleChange} 
                 >
                 <option selected>Selecione...</option>
+                <option value="">""</option>
                 <option value="Loja virtual">Loja virtual</option>
                 <option value="Loja física">Loja física</option>
             </select>
