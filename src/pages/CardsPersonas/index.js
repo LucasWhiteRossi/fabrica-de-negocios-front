@@ -57,7 +57,7 @@ export function CardsPersonas(){
                         <div>
                             <h5 className="card-title" style={{color:"#631354"}}>{currentPersona.nome}</h5>
                             <h6 className="card-subtitle mb-2 text-muted">{currentPersona.idade}</h6>
-                            <p className="card-text">{currentPersona.historia.length<300?`${currentPersona.historia}`:`${currentPersona.historia.slice(0,300)} ...`}</p>
+                            {currentPersona.historia &&(<p className="card-text">{currentPersona.historia.length<300?`${currentPersona.historia}`:`${currentPersona.historia.slice(0,300)} ...`}</p>)}
                             <Link to={`/visualizacao-persona/${currentPersona._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Visualizar</Link>
                             <Link to={`/edit-persona/${currentPersona._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Editar</Link>
                             <button className="btn btn-danger m-2" onClick={()=>handleDelete(currentPersona._id)}>Apagar</button>
