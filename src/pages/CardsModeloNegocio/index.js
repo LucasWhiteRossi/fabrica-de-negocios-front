@@ -1,10 +1,10 @@
-import api from '../../api/api';
+import { api } from '../../api/api';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../../components/Navbar';
 
 
-export function ModeloNegocio(){
+export function CardsModeloNegocio(){
    
     const [data, setData] = useState([]);
     const [negocio, setNegocio] = useState([]);
@@ -45,7 +45,7 @@ export function ModeloNegocio(){
                     <div className="d-flex align-items-center justify-content-center p-5">
                         <div>
                             <h5 className="card-title" style={{color:"#631354"}}>{currentNegocio.nome}</h5>
-                            <h6 className="card-subtitle mb-2 text-muted">{currentPersona.produtos}</h6>
+                            <h6 className="card-subtitle mb-2 text-muted">{currentNegocio.produtos}</h6>
                             <p className="card-text">{currentNegocio.beneficio.length<300?`${currentNegocio.beneficio}`:`${currentNegocio.beneficio.slice(0,300)} ...`}</p>
                             <p className="card-text">{currentNegocio.solucao.length<300?`${currentNegocio.solucao}`:`${currentNegocio.solucao.slice(0,300)} ...`}</p>
                             <p className="card-text">{currentNegocio.solucaoValor.length<300?`${currentNegocio.solucaoValor}`:`${currentNegocio.solucaoValor.slice(0,300)} ...`}</p>

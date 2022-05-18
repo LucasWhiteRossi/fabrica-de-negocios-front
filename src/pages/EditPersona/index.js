@@ -3,6 +3,7 @@ import { Navbar } from '../../components/Navbar';
 import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { AvatarSelector } from '../../components/AvatarSelector'
+import { api } from "../../api/api"
 
 export function EditPersona(){
     const params = useParams();
@@ -40,7 +41,7 @@ export function EditPersona(){
     useEffect(() => {
         async function fetchEdit() {
             const response = await api.get(
-            `https://ironrest.herokuapp.com/fabricapersona/${params.id}`      
+            `/cadastro-persona/${params.id}`      
             );
             setData({...response.data});
         }
@@ -62,7 +63,7 @@ function handleConfirm(event){
     const editObj = {...form};
     delete editObj._id;
 
-    api.put(`https://ironrest.herokuapp.com/fabricapersona/${params.id}`, editObj);
+    api.put(`/cadastro-persona${params.id}`, editObj);
     navigate("/personas");
 }
 

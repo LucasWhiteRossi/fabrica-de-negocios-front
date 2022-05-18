@@ -1,17 +1,17 @@
-import axios from 'axios';
+import { api } from "../../api/api"
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../../components/Navbar';
 
 
-export function Personas(){
+export function CardsPersonas(){
    
     const [data, setData] = useState([]);
     const [persona, setPersona] = useState([]);
 
     useEffect(() => {
         async function fetchData(){
-            const response = await axios.get('https://ironrest.herokuapp.com/fabricapersona')
+            const response = await api.get('/cadastro-persona')
             setData(response.data);
         }
         fetchData()
@@ -23,8 +23,8 @@ export function Personas(){
     },[data]);
 
     async function handleDelete(id) {
-        await axios.delete(
-        `https://ironrest.herokuapp.com/fabricapersona/${id}`
+        await api.delete(
+        `/cadastro-persona${id}`
         );
         let deletado = persona.filter((obj) => {
             return obj._id !== id 

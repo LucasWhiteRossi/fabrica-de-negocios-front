@@ -42,7 +42,7 @@ function handleChange(event){
 
 function handleConfirm(){
 
-    axios.post("https://ironrest.herokuapp.com/fabricapersona", form);
+    axios.post("/cadastro-persona", form);
     navigate("/personas");
 }
 

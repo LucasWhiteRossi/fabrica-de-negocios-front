@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { api } from "../../api/api"
 import { useNavigate, useParams } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
-
 
 export function EditNegocio(){
 
@@ -11,8 +9,9 @@ export function EditNegocio(){
 
     const navigate = useNavigate();
     
-    const [data, setData] = useSate({});
+    const [data, setData] = useState({});
     const [form, setForm] = useState({
+        nome: "",
         beneficio: "",
         solucao: "",
         produtos: "",
