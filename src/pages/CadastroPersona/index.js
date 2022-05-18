@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Navbar } from '../../components/Navbar';
-import axios from 'axios';
+import { api } from '../../api/api';
 import { useNavigate } from 'react-router-dom';
 import { AvatarSelector } from '../../components/AvatarSelector';
 
@@ -41,9 +41,14 @@ function handleChange(event){
 }
 
 function handleConfirm(){
-
-    axios.post("/persona/criar-persona", form);
-    navigate("/gerenciar-personas");
+    try{
+        api.post("/persona/criar-persona", form);
+        navigate("/gerenciar-personas");
+    } catch(error){
+        console.log(error)
+    }
+    
+    
 }
 
     return (
