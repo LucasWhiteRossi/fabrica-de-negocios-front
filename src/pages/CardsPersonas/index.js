@@ -47,7 +47,7 @@ export function CardsPersonas(){
             <div className="d-flex justify-content-center align-items-center">
                 <div className="d-flex justify-content-start rounded m-2" style={{width: "48rem", backgroundColor:"rgba(255,255,255,0.7)", borderRadius: "30px"}} >
                     {
-                        currentPersona.imagem!=="" && (
+                        currentPersona.imagem && (
                             <div className='d-flex justify-content-start align-items-center rounded p-5' >
                                 <img className="rounded" style={{width:"0.5el", height:"auto"}} src={require(`../../assets/avatars/${currentPersona.imagem}.jpg`)} alt={`${currentPersona.imagem}.jpg`}/>
                             </div>
