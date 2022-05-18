@@ -40,7 +40,8 @@ function handleChange(event){
     setForm({...form,[event.target.name]: event.target.value});
 }
 
-function handleConfirm(){
+function handleConfirm(event){
+    event.preventDefault();
     try{
         api.post("/persona/criar-persona", form);
         navigate("/gerenciar-personas");
