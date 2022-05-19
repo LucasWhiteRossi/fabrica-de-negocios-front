@@ -14,6 +14,7 @@ export function EditNegocio(){
     const [data, setData] = useState({});
     const [user, setUser] = useState({});
     const [userLoad, setUserLoad] = useState(true);
+    const [changeConnection, setChangeConnection] = useState(true);
     const [form, setForm] = useState({
         nome: "",
         beneficio: "",
@@ -65,9 +66,10 @@ export function EditNegocio(){
             );
             setUser({...response.data});
             setUserLoad(false);
+            setChangeConnection(true)
         }
         fetchUser();
-    },[]);
+    },[changeConnection]);
 
     useEffect(() => {
         setForm(data)
@@ -91,6 +93,7 @@ export function EditNegocio(){
         async function handleConnect(event){
             try{
                 await api.patch(`/persona/vincular-persona/${event}/${params.id}`);
+                setChangeConnection(false);
             } catch(error){
                 console.log(error)
             }
@@ -99,6 +102,7 @@ export function EditNegocio(){
         async function handleDisconnect(event){
             try{
                 await api.patch(`/persona/desvincular-persona/${event}/${params.id}`);
+                setChangeConnection(false)
             } catch(error){
                 console.log(error)
             }
