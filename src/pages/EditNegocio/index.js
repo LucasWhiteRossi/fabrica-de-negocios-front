@@ -90,7 +90,7 @@ export function EditNegocio(){
 
         async function handleConnect(event){
             try{
-                await api.post(`/persona/vincular-persona/${event}/${params.id}`);
+                await api.patch(`/persona/vincular-persona/${event}/${params.id}`);
             } catch(error){
                 console.log(error)
             }
@@ -98,7 +98,7 @@ export function EditNegocio(){
 
         async function handleDisconnect(event){
             try{
-                await api.post(`/persona/desvincular-persona/${event}/${params.id}`);
+                await api.patch(`/persona/desvincular-persona/${event}/${params.id}`);
             } catch(error){
                 console.log(error)
             }
