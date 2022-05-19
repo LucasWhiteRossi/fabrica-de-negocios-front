@@ -39,6 +39,7 @@ export function VisualizacaoModeloNegocio(){
         custoRelevante: "",
         tipoRecurso: "",
         despesasAtividades: "",
+        informacoesAdicionais: "",
     });
 
     useEffect(() => {
@@ -126,6 +127,11 @@ export function VisualizacaoModeloNegocio(){
                         <p><strong>Custos mais relevantes: </strong>{impressao.custoRelevante}</p>
                         <p><strong>Recursos mais caros e mais baratos: </strong>{impressao.tipoRecurso}</p>
                         <p><strong>Atividades que geram mais despesas: </strong>{impressao.despesasAtividades}</p>
+                        <br></br>
+
+                        <h2 className="text-center" style={{color:"#631354"}}>Informações Adicionais</h2>
+                        <br></br>
+                        <p>{impressao.informacoesAdicionais}</p>
                         <br></br>
                         <Link to={`/edit-modelo-negocio/${impressao._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Editar</Link>
                     </div>

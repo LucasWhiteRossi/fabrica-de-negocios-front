@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { api } from '../../api/api';
 import { useNavigate } from 'react-router-dom';
@@ -33,7 +33,9 @@ const [form, setForm] = useState({
         desafios: "",
         objecoes: "",
         oportunidades: "",
-        "papel-persona": ""	
+        "papel-persona": "",	
+        informacoesAdicionais: "",
+
 });
 
 function handleChange(event){
@@ -58,11 +60,11 @@ async function handleConfirm(event){
         <>
         <Navbar />
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-        <h1 className="text-center" style={{color:"white"}}>CONSTRUIR PERSONA</h1>
+        <h1 className="text-center" style={{color:"black"}}>CONSTRUIR PERSONA</h1>
         
         <div className="card p-3" style={{backgroundColor:"rgba(255,255,255,0.5)", borderRadius: "20px"}}>
         
-        {form.imagem && (<h2 className="text-center" style={{color:"#631354"}}>Foto atual</h2>)}
+        {form.imagem && (<h2 className="text-center" style={{color:"#631354"}}>Foto Atual</h2>)}
         {form.imagem && (<div className="d-flex justify-content-center">
                 < img 
                     src={require(`../../assets/avatars/${form.imagem}.jpg`)}
@@ -243,7 +245,7 @@ async function handleConfirm(event){
             </div>
             </div> 
             <br></br>
-            <h2 className="text-center" style={{color:"#631354"}}>História pessoal</h2>
+            <h2 className="text-center" style={{color:"#631354"}}>História Pessoal</h2>
             <br></br>
             <div className="mb-3">
                 <label for="historiaCadastro" className="form-label">Quem é {form.name?form.name:"sua persona"} na fila do pão? Se quiser, descreva um pouco da história pessoal de {form.name?form.name:"sua persona"}.</label>
@@ -382,9 +384,11 @@ async function handleConfirm(event){
                 onChange={handleChange} 
                 ></textarea>
             </div>
+            
             <br></br>
-            <h2 className="text-center" style={{color:"#631354"}}>Tomador de decisão</h2>
+            <h2 className="text-center" style={{color:"#631354"}}>Tomador de Decisão</h2>
             <br></br>
+
             <div className="mb-3">
                 <label for="papel-personaCadastro" className="form-label">Qual o papel da persona no processo de compra? Ela é a <strong>tomadora de decisão</strong>? Ou ela é quem <strong>comunica a necessidade</strong>? Neste caso, quem toma a decisão por ela?</label>
                 <input
@@ -396,6 +400,24 @@ async function handleConfirm(event){
                 onChange={handleChange} 
                 />
             </div>
+
+
+            <br></br>
+            <h2 className="text-center" style={{color:"#631354"}}>Informações Adicionais</h2>
+            <br></br>
+
+            <div className="mb-3">
+                <label for="informacoesAdicionais" className="form-label"></label>
+                <textarea
+                type="text" 
+                className="form-control" 
+                id="informacoesAdicionais" 
+                value={form.informacoesAdicionais}
+                name="informacoesAdicionais"
+                onChange={handleChange} 
+                ></textarea>
+            </div>
+
             <button type="submit" className="btn btn-primary">Gerar Persona</button>
             </form>
             </div>
