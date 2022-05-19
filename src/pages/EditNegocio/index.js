@@ -1,15 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { api } from "../../api/api"
 import { useNavigate, useParams } from 'react-router-dom';
+import { AuthContext } from '../../contexts/authContext';
 
 export function EditNegocio(){
 
     const params = useParams();
-
+    const authContext = useContext(AuthContext);
+    const { loggedInUser } = authContext;
     const navigate = useNavigate();
     
     const [data, setData] = useState({});
+    const [user, setUser] = useState({});
+    const [userLoad, setUserLoad] = useState(true);
     const [form, setForm] = useState({
         nome: "",
         beneficio: "",
@@ -55,6 +59,17 @@ export function EditNegocio(){
     },[]);
 
     useEffect(() => {
+        async function fetchUser() {
+            const response = await api.get(
+            `/user/profile`
+            );
+            setUser({...response.data});
+            setUserLoad(false);
+        }
+        fetchUser();
+    },[]);
+
+    useEffect(() => {
         setForm(data)
         console.log(data)
     }, [data]);
@@ -73,14 +88,35 @@ export function EditNegocio(){
         navigate("/gerenciar-negocio");
          
         }
+
+       async function handleConnect(event){
+            try{
+                await api.post(`/persona/vincular-persona/${event}/${params.id}`);
+            } catch(error){
+                console.log(error)
+            }
+        }
     
         return (
             <>
             <Navbar />
             <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-            <h1 className="text-center" style={{color:"white"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
-    
+            <h1 className="text-center" style={{color:"black"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
+            <br></br>
+                <h2 className="text-center" style={{color:"#631354"}}>Vincular Persona</h2>
+                <br></br>
+           
+           {!userLoad && user.vinculoPersona.map((currentPersona) => {
+                     return (<>
+                     <h1>{currentPersona.nome}</h1>
+                     <button onClick={()=>handleConnect(currentPersona._id)} className="btn btn-primary">Vincular</button>
+                     </>)
+                })}
+
+            
+
             <form onSubmit={handleConfirm}>
+
     
                 <br></br>
                 <h2 className="text-center" style={{color:"#631354"}}>Proposta de valor:</h2>
@@ -525,8 +561,12 @@ export function EditNegocio(){
                     <button type="submit" className="btn btn-primary">Atualizar Negócio</button>
                 
                 </form>
+
+
+
+
                </div> 
+
             </>
         )
     }
-    
