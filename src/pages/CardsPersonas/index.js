@@ -40,6 +40,9 @@ export function CardsPersonas(){
         {!isLoading && (
         <>
                     <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
+
+                    <Link to="/cadastro-persona" className="btn btn-primary m-2 rounded">CRIAR NOVA PERSONA</Link>
+
         <h1 className="text-center" style={{color:"white"}}>PERSONAS CONSTRUÍDAS</h1>
         {persona.map((currentPersona) => {
             return (
