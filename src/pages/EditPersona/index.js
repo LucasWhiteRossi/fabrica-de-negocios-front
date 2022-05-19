@@ -34,7 +34,8 @@ export function EditPersona(){
         desafios: "",
         objecoes: "",
         oportunidades: "",
-        "papel-persona": ""	
+        "papel-persona": "",
+        informacoesAdicionais: "",
 });
 
 
@@ -399,6 +400,19 @@ function handleConfirm(event){
                 onChange={handleChange} 
                 />
             </div>
+
+            <div className="mb-3">
+                <label for="informacoesAdicionais" className="form-label"></label>
+                <textarea
+                type="text" 
+                className="form-control" 
+                id="informacoesAdicionais" 
+                value={form.informacoesAdicionais}
+                name="informacoesAdicionais"
+                onChange={handleChange} 
+                ></textarea>
+            </div>
+
             <button type="submit" className="btn btn-primary">Atualizar Persona</button>
             </form>
             </div>

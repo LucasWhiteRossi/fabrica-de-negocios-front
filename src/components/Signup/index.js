@@ -65,10 +65,13 @@ export function Signup() {
         value={form.password}
         onChange={handleChange}
       />
+      <h12 className="text-center" style={{color:"gray"}}
+
+><small>Mínimo 8 caracteres: letras, números e caracteres especiais.</small></h12>
       </div>
 
       <div className="mb-3">
-      <label className="form-label" htmlFor="formConfirmPassword">Confirmação de senha</label>
+      <label className="form-label" htmlFor="formConfirmPassword">Confirmação de senha:</label>
       <input
         id="formConfirmPassword"
         type="password"

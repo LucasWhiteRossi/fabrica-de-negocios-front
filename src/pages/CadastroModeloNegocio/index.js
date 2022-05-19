@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { api } from "../../api/api"
 import { useNavigate } from 'react-router-dom';
@@ -38,6 +38,7 @@ const [form, setForm] = useState({
     custoRelevante: "",
     tipoRecurso: "",
     despesasAtividades: "",
+    informacoesAdicionais: "",
 });
 
 function handleChange(event){
@@ -59,12 +60,15 @@ async function handleConfirm(event){
         <>
         <Navbar />
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-        <h1 className="text-center" style={{color:"white"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
+        <h1 className="text-center" style={{color:"black"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
 
         <form onSubmit={handleConfirm}>
+        <br></br>
+            <h2 className="text-center" style={{color:"#631354"}}>Nome do seu Negócio</h2>
+            <br></br>
 
             <div class="mb-3">
-                <label for="nome" class="form-label">Nome do seu Negócio</label>
+                <label for="nome" class="form-label"></label>
                 <input 
                 type="text" 
                 className="form-control" 
@@ -76,7 +80,7 @@ async function handleConfirm(event){
             </div>
 
             <br></br>
-            <h2 className="text-center" style={{color:"#631354"}}>Proposta de valor:</h2>
+            <h2 className="text-center" style={{color:"#631354"}}>Proposta de Valor</h2>
             <br></br>
 
             <div class="mb-3">
@@ -128,7 +132,7 @@ async function handleConfirm(event){
             </div> 
 
             <br></br>
-            <h2 className="text-center" style={{color:"#631354"}}>Segmento de clientes:</h2>
+            <h2 className="text-center" style={{color:"#631354"}}>Segmento de Clientes</h2>
             <br></br>
 
             <div className="mb-3">
@@ -156,7 +160,7 @@ async function handleConfirm(event){
             </div>
 
             <br></br>
-            <h2 className="text-center" style={{color:"#631354"}}>Relacionamento com clientes:</h2>
+            <h2 className="text-center" style={{color:"#631354"}}>Relacionamento com clientes</h2>
             <br></br>
 
 
@@ -252,7 +256,7 @@ async function handleConfirm(event){
             </div> 
             
             <br></br>
-                <h2 className="text-center" style={{color:"#631354"}}>Canais de Entrega:</h2>
+                <h2 className="text-center" style={{color:"#631354"}}>Canais de Entrega</h2>
             <br></br>
 
             <div className="mb-3">
@@ -296,7 +300,7 @@ async function handleConfirm(event){
             </div>
 
                 <br></br>
-                <h2 className="text-center" style={{color:"#631354"}}>Fontes de Receitas:</h2>
+                <h2 className="text-center" style={{color:"#631354"}}>Fontes de Receitas</h2>
                 <br></br>
 
             <div className="mb-3">
@@ -349,7 +353,7 @@ async function handleConfirm(event){
             </div>
 
             <br></br>
-            <h2 className="text-center" style={{color:"#631354"}}>Atividades Principais:</h2>
+            <h2 className="text-center" style={{color:"#631354"}}>Atividades Principais</h2>
             <br></br>
 
 
@@ -378,7 +382,7 @@ async function handleConfirm(event){
             </div>
 
             <br></br>
-            <h2 className="text-center" style={{color:"#631354"}}>Recursos:</h2>
+            <h2 className="text-center" style={{color:"#631354"}}>Recursos</h2>
             <br></br>
 
 
@@ -407,7 +411,7 @@ async function handleConfirm(event){
             </div>
 
             <br></br>
-            <h2 className="text-center" style={{color:"#631354"}}>Parceiros:</h2>
+            <h2 className="text-center" style={{color:"#631354"}}>Parceiros</h2>
             <br></br>
 
 
@@ -463,7 +467,7 @@ async function handleConfirm(event){
             </div>
 
             <br></br>
-            <h2 className="text-center" style={{color:"#631354"}}>Estrutura de Curso:</h2>
+            <h2 className="text-center" style={{color:"#631354"}}>Estrutura de Custos</h2>
             <br></br>
 
 
@@ -501,6 +505,22 @@ async function handleConfirm(event){
                 name="despesasAtividades"
                 onChange={handleChange} 
                 />
+            </div>
+
+            <br></br>
+            <h2 className="text-center" style={{color:"#631354"}}>Informações Adicionais</h2>
+            <br></br>
+
+            <div className="mb-3">
+                <label for="informacoesAdicionais" className="form-label"></label>
+                <textarea
+                type="text" 
+                className="form-control" 
+                id="informacoesAdicionais" 
+                value={form.informacoesAdicionais}
+                name="informacoesAdicionais"
+                onChange={handleChange} 
+                ></textarea>
             </div>
                 
                 <button type="submit" className="btn btn-primary">Gerar Negócio</button>

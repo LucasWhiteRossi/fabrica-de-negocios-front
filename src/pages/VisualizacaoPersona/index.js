@@ -32,7 +32,8 @@ export function VisualizacaoPersona(){
         desafios: "",
         objecoes: "",
         oportunidades: "",
-        "papel-persona": ""	
+        "papel-persona": "",
+        informacoesAdicionais: "",
     });
 
     useEffect(() => {
@@ -98,6 +99,12 @@ export function VisualizacaoPersona(){
                         <h2 className="text-center" style={{color:"#631354"}}>Tomador de decisão</h2>
                         <p><strong>Papel na tomada de decisão: </strong>{impressao["papel-persona"]}</p>
                         <br></br>
+
+                        <h2 className="text-center" style={{color:"#631354"}}>Informações Adicionais</h2>
+                        <br></br>
+                        <p>{impressao.informacoesAdicionais}</p>
+                        <br></br>
+
                         <Link to={`/edit-persona/${impressao._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Editar</Link>
                     </div>
                 
