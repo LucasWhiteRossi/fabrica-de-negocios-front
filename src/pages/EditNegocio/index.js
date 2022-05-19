@@ -86,33 +86,50 @@ export function EditNegocio(){
     
         api.put(`/modelo-negocio/editar-negocio/${params.id}`, editObj);
         navigate("/gerenciar-negocio");
-         
         }
 
-       async function handleConnect(event){
+        async function handleConnect(event){
             try{
                 await api.post(`/persona/vincular-persona/${event}/${params.id}`);
             } catch(error){
                 console.log(error)
             }
         }
+
+        async function handleDisconnect(event){
+            try{
+                await api.post(`/persona/desvincular-persona/${event}/${params.id}`);
+            } catch(error){
+                console.log(error)
+            }
+        }
+
     
         return (
             <>
             <Navbar />
             <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
             <h1 className="text-center" style={{color:"black"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
-            <br></br>
-                <h2 className="text-center" style={{color:"#631354"}}>Vincular Persona</h2>
                 <br></br>
-           
-           {!userLoad && user.vinculoPersona.map((currentPersona) => {
-                     return (<>
-                     <h1>{currentPersona.nome}</h1>
-                     <button onClick={()=>handleConnect(currentPersona._id)} className="btn btn-primary">Vincular</button>
-                     </>)
+                    <h2 className="text-center" style={{color:"#631354"}}>Vincular Persona</h2>
+                <br></br>
+            
+            {!userLoad && user.vinculoPersona.filter((currentPersona)=>{return currentPersona.vinculoNegocio!==params.id}).map((currentPersona) => {
+                    return (<>
+                    <h1>{currentPersona.nome}</h1>
+                    <button onClick={()=>handleConnect(currentPersona._id)} className="btn btn-primary">Vincular</button>
+                    </>)
                 })}
-
+            
+                <br></br>
+                    <h2 className="text-center" style={{color:"#631354"}}>Personas Vinculadas</h2>
+                <br></br>
+            {!userLoad && user.vinculoPersona.filter((currentPersona)=>{return currentPersona.vinculoNegocio===params.id}).map((currentPersona) => {
+                    return (<>
+                    <h1>{currentPersona.nome}</h1>
+                    <button onClick={()=>handleDisconnect(currentPersona._id)} className="btn btn-danger">Desvincular</button>
+                    </>)
+                })}
             
 
             <form onSubmit={handleConfirm}>
@@ -214,9 +231,6 @@ export function EditNegocio(){
                     onChange={handleChange} 
                     />
                 </div>
-    
-    
-    
     
                 <div className="mb-3">
                     <label for="contatos" className="form-label">Em que momentos estes <strong>contatos</strong> precisam acontecer? E por quais motivos. Por exemplo, pense em momentos em que você precisa entrar em contato para fazer a venda, ou acompanhar a instalação de algo, ou garantir uma boa experiência, ou receber um feedback para melhorar o produto.
@@ -395,7 +409,6 @@ export function EditNegocio(){
                 <h2 className="text-center" style={{color:"#631354"}}>Atividades Principais:</h2>
                 <br></br>
     
-    
                 <div className="mb-3">
                     <label for="atividades" className="form-label">Quais <strong>atividades principais</strong> serão realizadas para a concretização da proposta de valor?</label>
                     <input 
@@ -561,12 +574,7 @@ export function EditNegocio(){
                     <button type="submit" className="btn btn-primary">Atualizar Negócio</button>
                 
                 </form>
-
-
-
-
-               </div> 
-
+            </div> 
             </>
         )
     }
