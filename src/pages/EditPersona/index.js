@@ -54,6 +54,21 @@ export function EditPersona(){
         console.log(data)
     },[data])
 
+   /*  useEffect(() => {
+        async function fetchEdit() {
+            const response = await api.get(
+            `/persona/personas/${params.id}`      
+            );
+            setData({...response.data});
+        }
+        fetchEdit();
+    },[]);
+
+    useEffect(()=>{
+        setForm(data)
+        console.log(data)
+    },[data]) */
+
 function handleChange(event){
     setForm({...form,[event.target.name]: event.target.value});
 }
