@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { api } from "../../api/api";
-import { useNavigate } from "react-router-dom";
 import { InfoCard } from "../InfoCard";
 
 export function Signup() {
-  const navigate = useNavigate();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -18,20 +16,20 @@ export function Signup() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-
     try {
       await api.post("/user/signup", { ...form });
-  
+      setForm({
+        name: "",
+        email: "",
+        password: "",
+        confirmPassword: "",
+        })
+        alert("Sua conta foi criada, por favor faça login ao lado.")
     } catch (error) {
       console.log(error);
+      alert("A sua conta não foi criada, houve um erro");
     }
-    setForm({
-      name: "",
-      email: "",
-      password: "",
-      confirmPassword: "",
-      })
-      alert("Sua conta foi criada, por favor faça login ao lado");
+      /* alert("Sua conta foi criada, por favor faça login ao lado.") */
   }
   
 
