@@ -21,12 +21,19 @@ export function Signup() {
 
     try {
       await api.post("/user/signup", { ...form });
-
-      navigate("/acesso");
+  
     } catch (error) {
       console.log(error);
     }
+    setForm({
+      name: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      })
+      alert("Sua conta foi criada, por favor faça login ao lado");
   }
+  
 
   return (
     <InfoCard title="Criar Conta">
