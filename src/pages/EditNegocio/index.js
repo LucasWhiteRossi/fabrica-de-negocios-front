@@ -120,7 +120,7 @@ export function EditNegocio(){
                     return (
                     
                 <div className="d-flex justify-content-center align-items-center">
-                <CandyCard noCard={true} className="d-flex justify-content-start flex-row rounded m-2" style={{width: "48rem", borderRadius: "30px", flexDirection:"row"}} >
+                <CandyCard noCard={true} className="d-flex justify-content-start flex-row rounded m-2" style={{width: "20rem", borderRadius: "30px", flexDirection:"row"}} >
                     {
                         currentPersona.imagem && (
                             <div className='d-flex justify-content-start align-items-center rounded p-5' >
@@ -132,7 +132,7 @@ export function EditNegocio(){
                         <div>
                             <h5 className="card-title" style={{color:"#631354"}}>{currentPersona.nome}</h5>
                             <h6 className="card-subtitle mb-2 text-muted" style={{color:"#1e1d1d"}}>{currentPersona.idade}</h6>
-                            {currentPersona.historia &&(<p className="card-text">{currentPersona.historia.length<300?`${currentPersona.historia}`:`${currentPersona.historia.slice(0,300)} ...`}</p>)}
+                            {currentPersona.historia &&(<p className="card-text">{currentPersona.historia.length<100?`${currentPersona.historia}`:`${currentPersona.historia.slice(0,100)} ...`}</p>)}
                             <button onClick={()=>handleConnect(currentPersona._id)} className="btn btn-primary">Vincular</button>
                             <Link to={`/visualizacao-persona/${currentPersona._id}`} className="btn btn-primary">Visualizar</Link>
                         </div>
@@ -148,11 +148,28 @@ export function EditNegocio(){
                     <h2 className="text-center" style={{color:"#631354"}}>Personas Vinculadas</h2>
                 <br></br>
             {!userLoad && user.vinculoPersona.filter((currentPersona)=>{return currentPersona.vinculoNegocio===params.id}).map((currentPersona) => {
-                    return (<CandyCard>
-                    {currentPersona && <h1>{currentPersona.nome}</h1>}
-                    <button onClick={()=>handleDisconnect(currentPersona._id)} className="btn btn-danger">Desvincular</button>
+                    return (
+                    <div className="d-flex justify-content-center align-items-center">
+                <CandyCard noCard={true} className="d-flex justify-content-start flex-row rounded m-2" style={{width: "20rem", borderRadius: "30px", flexDirection:"row"}} >
+                    {
+                        currentPersona.imagem && (
+                            <div className='d-flex justify-content-start align-items-center rounded p-5' >
+                                <img className="rounded" style={{width:"0.5el", height:"auto"}} src={require(`../../assets/avatars/${currentPersona.imagem}.jpg`)} alt={`${currentPersona.imagem}.jpg`}/>
+                            </div>
+                        )
+                    }
+                    <div className="d-flex align-items-center justify-content-center p-5">
+                        <div>
+                            <h5 className="card-title" style={{color:"#631354"}}>{currentPersona.nome}</h5>
+                            <h6 className="card-subtitle mb-2 text-muted" style={{color:"#1e1d1d"}}>{currentPersona.idade}</h6>
+                            {currentPersona.historia &&(<p className="card-text">{currentPersona.historia.length<100?`${currentPersona.historia}`:`${currentPersona.historia.slice(0,100)} ...`}</p>)}
+                            <button onClick={()=>handleDisconnect(currentPersona._id)} className="btn btn-danger">Desvincular</button>
                     <Link to={`/visualizacao-persona/${currentPersona._id}`} className="btn btn-primary">Visualizar</Link>
-                    </CandyCard>)
+                        </div>
+                    </div>
+                </CandyCard>
+            </div>
+                    )
                 })}
             
             <CandyCard>
