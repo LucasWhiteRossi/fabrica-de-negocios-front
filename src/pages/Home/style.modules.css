@@ -1,0 +1,11 @@
+.home-body{
+    background-color: #6e5ddf;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p{
+    text-align: justify;
+    text-justify: inter-word;
+}
