@@ -10,23 +10,16 @@ export function Home(){
 
       <div className='homePage'>
           <Navbar />
-          <h1 style={{fontSize:"25px", color:"#631354"}}>Tenha uma visão estratégica do seu negócio, construindo Personas e Modelos de Negócios.</h1>
-
+          <div>
+          </div>
           <div className="home-body">
-              <div className='d-flex justify-content-center align-items-center' style={{backgroundColor:"rgba(255,255,255, 0.75)", width:"1000px", height:"auto", margin:"0px"}}>
+              <div className='d-flex justify-content-center align-items-center' style={{backgroundColor:"rgba(171 184 255 / 18%)", width:"1000px", height:"auto", margin:"0px"}}>
                   <div className='p-5'>
                       <div>
                           <br />
-                          <p style={{fontSize:"22px"}}>A Fábrica de Negócio é uma ferramenta flexível e de fácil compreensão.</p>
-                          <p style={{fontSize:"22px"}}>Com mais de 20 perguntas para você preencher e conseguir enxergar o seu negócio de forma mais clara. São diversas funcionalidades que farão o seu projeto criar forma.</p>
-                          <p style={{fontSize:"22px"}}>Agilize e facilite o processo estratégico. Documente e edite sempre que necessário, sobretudo pela necessidade da constante validação dessas mudanças.
-                          Realize o seu cadastro e comece agora mesmo.</p>
-
-
-
-
-
-
+                          <p style={{fontSize:"25px", color:"rgb(79 63 184)"}}><strong>A Fábrica de Negócio é uma ferramenta flexível e de fácil compreensão.</strong></p>
+                          <p style={{fontSize:"20px"}}>Tenha uma visão estratégica do seu negócio, construindo Personas e Modelos de Negócios para que as suas estratégias possam ser implementada com sucesso.
+ </p>
 
                           <br />
                       </div>
@@ -38,15 +31,6 @@ export function Home(){
               
           </div>
 
-          <div className="justify-content-center align-items-center" style={{backgroundColor:"rgba(255,255,255, 0.75)", width:"auto", height:"auto"}}>
-          <p style={{fontSize:"18px"}}><span>Como usar?</span> </p>
-          <p style={{fontSize:"15px"}}>1. Para começar, realize o seu cadastro e faça o login.</p>
-          <p style={{fontSize:"15px"}}>2. Escolha se você quer criar primeiro a sua persona ou o seu modelo de negócio, escolhendo um dos botões na parte superior do site (Modelo de Negócios ou Personas).</p>
-          <p style={{fontSize:"15px"}}>3. Preencha o formulário sem pressa, separe pelo menos 20 minutos para se dedicar a responder todas as perguntas. Se necessário realize pesquisas para obter as melhores respostas possíveis. Desta forma você saberá qual estratégia de marketing será melhor para o seu negócio.</p>  
-          <p style={{fontSize:"15px"}}>4. Se preferir, você pode vincular a sua persona desejada ao modelo de negócio, após a criação de ambos.</p>
-          <p style={{fontSize:"15px"}}>5. Após suas criações, tudo estará salvo para quando você necessitar conferir ou alterar alguma informação.</p>
-          <p style={{fontSize:"15px"}}>6. Com todas essas informações impressas na tela, você conseguirá montar uma estratégia de marketing que alavancará as suas vendas.</p>
-          </div>
           
       </div>
       
