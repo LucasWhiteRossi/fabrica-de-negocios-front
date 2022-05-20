@@ -134,7 +134,7 @@ export function EditNegocio(){
                     </>)
                 })}
             
-
+            <div className="card p-3" style={{backgroundColor:"rgba(255,255,255,0.5)"}}>
             <form onSubmit={handleConfirm}>
 
     
@@ -577,6 +577,7 @@ export function EditNegocio(){
                     <button type="submit" className="btn btn-primary">Atualizar Negócio</button>
                 
                 </form>
+                </div>
             </div> 
             </>
         )

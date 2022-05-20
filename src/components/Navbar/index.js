@@ -10,9 +10,9 @@ export function Navbar() {
   const { loggedInUser } = useContext(AuthContext);
 
   return (
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar" style={{"backgroundColor":"yellow"}}>
    
-    <h1><Link to="/" style={{ textDecoration: "none" }}>FÁBRICA DE NEGÓCIOS</Link></h1>
+    <h1><Link to="/" style={{ textDecoration: "none", color:"white"}}>FÁBRICA DE NEGÓCIOS</Link></h1>
     
     {!loggedInUser &&(
     <div class="nav-items">
