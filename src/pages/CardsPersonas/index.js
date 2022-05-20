@@ -48,7 +48,7 @@ export function CardsPersonas(){
             return (
             <>
             <div className="d-flex justify-content-center align-items-center">
-                <div className="d-flex justify-content-start rounded m-2" style={{width: "48rem", backgroundColor:"rgba(255,255,255,0.7)", borderRadius: "30px"}} >
+                <div className="d-flex justify-content-start rounded m-2" style={{width: "48rem", backgroundColor:"rgba(102, 16, 242,0.7)", borderRadius: "30px"}} >
                     {
                         currentPersona.imagem && (
                             <div className='d-flex justify-content-start align-items-center rounded p-5' >

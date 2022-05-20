@@ -12,7 +12,7 @@ export function ComoUtilizar() {
                 <h1 className="text-center" style={{color:"white"}}>COMO UTILIZAR</h1>
 
                 <div className="d-flex justify-content-center align-items-center">
-                    <div className="justify-content-center align-items-center text-justify p-5" style={{width: "48rem", backgroundColor:"rgba(255,255,255,0.7)", borderRadius: "30px"}} >
+                    <div className="justify-content-center align-items-center text-justify p-5" style={{width: "48rem", backgroundColor:"rgba(102, 16, 242,0.7)", borderRadius: "30px"}} >
                         <h2>O que é uma persona?</h2>
                         <p>Persona é um personagem fictício que representa o cliente ideal do seu negócio. É baseado em dados e características de clientes reais. Trata-se de uma criação a partir de suas histórias pessoais, motivações, objetivos, desafios e preocupações.</p>
                         <p>A persona é uma ferramenta de segmentação de mercado que, bem utilizada, alavancará as suas vendas.</p>

@@ -139,7 +139,7 @@ async function handleDisconnect(event){
                 })}
         
         
-        <div className="card p-3" style={{backgroundColor:"rgba(255,255,255,0.5)"}}>
+        <div className="card p-3" style={{backgroundColor:"rgba(102, 16, 242,0.5)"}}>
         <form onSubmit={handleConfirm}>
             
             <div className="mb-3">
