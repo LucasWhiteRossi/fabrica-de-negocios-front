@@ -119,13 +119,18 @@ async function handleDisconnect(event){
                 })}
             
             
-                <br></br>
-                    <h2 className="text-center" style={{color:"#631354"}}>Modelo de Negócio Vinculado</h2>
+                
+                    
                 <br></br>
                 {!userLoad && user.vinculoNegocio.filter((currentNegocio)=>{return !currentNegocio.vinculoPersona.includes(params.id)}).map((currentNegocio) => {
                     return (
                     <>
-                    {currentNegocio.nome && <h1>{currentNegocio.nome}</h1>}
+                    {currentNegocio.nome && (
+                    <>
+                    <h2 className="text-center" style={{color:"#631354"}}>Modelo de Negócio Vinculado:</h2>
+                    <h1>{currentNegocio.nome}</h1>
+                    </>
+                    )}
                     <button onClick={()=>handleDisconnect(currentNegocio._id)} className="btn btn-danger">Desvincular</button>
                     <Link to={`/visualizacao-negocio/${currentNegocio._id}`} className="btn btn-primary">Visualizar</Link>
                     </>
