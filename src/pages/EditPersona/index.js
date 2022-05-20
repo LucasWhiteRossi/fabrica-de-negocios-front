@@ -97,7 +97,7 @@ function handleConfirm(event){
                 
                     
                 <br></br>
-                {!userLoad && user.vinculoNegocio.filter((currentNegocio)=>{return !currentNegocio.vinculoPersona.includes(params.id)}).map((currentNegocio) => {
+                {!userLoad && user.vinculoNegocio.filter((currentNegocio)=>{return currentNegocio.vinculoPersona.includes(params.id)}).map((currentNegocio) => {
                     return (
                     <>
                     {currentNegocio.nome && (
