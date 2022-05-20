@@ -150,7 +150,7 @@ export function EditNegocio(){
             {!userLoad && user.vinculoPersona.filter((currentPersona)=>{return currentPersona.vinculoNegocio===params.id}).map((currentPersona) => {
                     return (
                     <div className="d-flex justify-content-center align-items-center">
-                <CandyCard noCard={true} className="d-flex justify-content-start flex-row rounded m-2" style={{width: "60%", borderRadius: "30px", flexDirection:"row"}} >
+                <CandyCard noCard={true} className="d-flex justify-content-start flex-row rounded m-2" style={{width: "100%", borderRadius: "30px", flexDirection:"row"}} >
                     {
                         currentPersona.imagem && (
                             <div className='d-flex justify-content-start align-items-center rounded p-5' >
