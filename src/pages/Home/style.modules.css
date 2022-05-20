@@ -3,7 +3,6 @@ body{
 }
 
 
-
 .home-body{
     display: flex;
     align-items: center;
@@ -15,10 +14,4 @@ body{
 p{
     text-align: justify;
     text-justify: inter-word;
-}
-
-.como-usar{
-    background-color: #6e5ddf;
-    color: #ffffff; 
-    text-align: center;
 }
