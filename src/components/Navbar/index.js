@@ -10,20 +10,20 @@ export function Navbar() {
   const { loggedInUser } = useContext(AuthContext);
 
   return (
-    <nav class="navbar" style={{"backgroundColor":"#ffc107"}}>
+    <nav class="navbar" style={{"backgroundColor":"#6610f2"}}>
    
     <h1><Link to="/" style={{ textDecoration: "none", color:"white"}}>FÁBRICA DE NEGÓCIOS</Link></h1>
     
     {!loggedInUser &&(
     <div class="nav-items">
-        <Link class="btn btn-outline-danger m-2" to="/acesso">ENTRAR</Link>
-        <Link class="btn btn-outline-danger m-2" to="/como-utilizar">SOLUÇÕES</Link>
+        <Link class="btn btn-outline-warning m-2" to="/acesso">ENTRAR</Link>
+        <Link class="btn btn-outline-warning m-2" to="/como-utilizar">SOLUÇÕES</Link>
     </div>)}
     {loggedInUser &&(
     <div class="nav-items">
-        <Link class="btn btn-outline-danger m-2" to="/gerenciar-negocio">MODELO DE NEGÓCIOS</Link>
-        <Link class="btn btn-outline-danger m-2" to="/gerenciar-personas">PERSONAS</Link>
-        <Link class="btn btn-outline-danger m-2" to="/como-utilizar">SOLUÇÕES</Link>
+        <Link class="btn btn-outline-warning m-2" to="/gerenciar-negocio">MODELO DE NEGÓCIOS</Link>
+        <Link class="btn btn-outline-warning m-2" to="/gerenciar-personas">PERSONAS</Link>
+        <Link class="btn btn-outline-warning m-2" to="/como-utilizar">SOLUÇÕES</Link>
         <DropdownButton id="dropdown" title="MENU" variant="warning" className="m-2">
 
             <DropdownItem>
@@ -41,7 +41,7 @@ export function Navbar() {
             </DropdownItem>
 
             <DropdownItem >
-              <Link  to="/cadastro-persona" style={{'textDecoration':'none', 'color':'red'}}>+ CRIAR PERSONAS</Link>
+              <Link  to="/cadastro-persona" style={{'textDecoration':'none', 'color':'purple'}}>+ CRIAR PERSONAS</Link>
             </DropdownItem>
 
             <Dropdown.Divider />
