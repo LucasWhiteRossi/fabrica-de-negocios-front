@@ -1,5 +1,5 @@
 body{
-    background-color: #bab0d7;
+    background-color: #e5e0f5;
 }
 
 .btn-primary:hover {
@@ -12,4 +12,16 @@ body{
     background-color: #8454af;
     border-color: #834bb4;
     color: #fff;
+}
+
+h1{
+    color: rgb(126, 21, 112);
+    font-style: normal;
+    font-size: medium;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 15px;
+}
+
+a{
+    color: whitesmoke;
 }

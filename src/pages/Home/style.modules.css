@@ -9,15 +9,3 @@ p{
     text-align: justify;
     text-justify: inter-word;
 }
-
-.btn-primary:hover {
-    background-color: #c999f2;
-    border-color: #8c5cb5;
-    color: #fff;
-}
-
-.btn-primary {
-    background-color: #8454af;
-    border-color: #834bb4;
-    color: #fff;
-}
