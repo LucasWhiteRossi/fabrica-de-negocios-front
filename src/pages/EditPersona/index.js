@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { useParams, Link } from 'react-router-dom';
 import { AvatarSelector } from '../../components/AvatarSelector'
 import { api } from "../../api/api"
+import { CandyCard } from '../../components/CandyCard';
 
 export function EditPersona(){
     const params = useParams();
@@ -111,11 +112,11 @@ async function handleDisconnect(event){
                 <br></br>
             
                 {!userLoad && user.vinculoNegocio.filter((currentNegocio)=>{return currentNegocio.vinculoPersona.includes(params.id)}).map((currentNegocio) => {
-                    return (<>
+                    return (<CandyCard>
                     {currentNegocio.nome &&<h1>{currentNegocio.nome}</h1>}
                     <button onClick={()=>handleConnect(currentNegocio._id)} className="btn btn-primary">Vincular</button>
                     <Link to={`/visualizacao-negocio/${currentNegocio._id}`} className="btn btn-primary">Visualizar</Link>
-                    </>)
+                    </CandyCard>)
                 })}
             
             
@@ -126,10 +127,10 @@ async function handleDisconnect(event){
                     return (
                     <>
                     {currentNegocio.nome && (
-                    <>
+                    <CandyCard>
                     <h2 className="text-center" style={{color:"#631354"}}>Modelo de Negócio Vinculado:</h2>
                     <h1>{currentNegocio.nome}</h1>
-                    </>
+                    </CandyCard>
                     )}
                     <button onClick={()=>handleDisconnect(currentNegocio._id)} className="btn btn-danger">Desvincular</button>
                     <Link to={`/visualizacao-negocio/${currentNegocio._id}`} className="btn btn-primary">Visualizar</Link>
@@ -139,7 +140,7 @@ async function handleDisconnect(event){
                 })}
         
         
-        <div className="card p-3" style={{backgroundColor:"rgba(102, 16, 242,0.5)"}}>
+        <CandyCard>
         <form onSubmit={handleConfirm}>
             
             <div className="mb-3">
@@ -481,7 +482,7 @@ async function handleDisconnect(event){
 
             <button type="submit" className="btn btn-primary">Atualizar Persona</button>
             </form>
-            </div>
+            </CandyCard>
             </div>
         </>
 

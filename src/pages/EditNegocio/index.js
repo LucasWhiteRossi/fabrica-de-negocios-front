@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { api } from "../../api/api"
 import { useNavigate, useParams, Link } from 'react-router-dom';
+import { CandyCard } from '../../components/CandyCard';
 
 export function EditNegocio(){
 
@@ -116,25 +117,25 @@ export function EditNegocio(){
                 <br></br>
             
             {!userLoad && user.vinculoPersona.filter((currentPersona)=>{return currentPersona.vinculoNegocio!==params.id}).map((currentPersona) => {
-                    return (<>
+                    return (<CandyCard>
                     {currentPersona && <h1>{currentPersona.nome}</h1>}
                     <button onClick={()=>handleConnect(currentPersona._id)} className="btn btn-primary">Vincular</button>
                     <Link to={`/visualizacao-persona/${currentPersona._id}`} className="btn btn-primary">Visualizar</Link>
-                    </>)
+                    </CandyCard>)
                 })}
             
                 <br></br>
                     <h2 className="text-center" style={{color:"#631354"}}>Personas Vinculadas</h2>
                 <br></br>
             {!userLoad && user.vinculoPersona.filter((currentPersona)=>{return currentPersona.vinculoNegocio===params.id}).map((currentPersona) => {
-                    return (<>
+                    return (<CandyCard>
                     {currentPersona && <h1>{currentPersona.nome}</h1>}
                     <button onClick={()=>handleDisconnect(currentPersona._id)} className="btn btn-danger">Desvincular</button>
                     <Link to={`/visualizacao-persona/${currentPersona._id}`} className="btn btn-primary">Visualizar</Link>
-                    </>)
+                    </CandyCard>)
                 })}
             
-            <div className="card p-3" style={{backgroundColor:"rgba(102, 16, 242,0.5)"}}>
+            <CandyCard>
             <form onSubmit={handleConfirm}>
 
     
@@ -577,7 +578,7 @@ export function EditNegocio(){
                     <button type="submit" className="btn btn-primary">Atualizar Negócio</button>
                 
                 </form>
-                </div>
+                </CandyCard>
             </div> 
             </>
         )
