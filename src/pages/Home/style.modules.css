@@ -1,14 +1,8 @@
-body{
-    background-color: #fbc23e/*#6b5edd*/;
-}
-
-
 .home-body{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 
 
 p{
