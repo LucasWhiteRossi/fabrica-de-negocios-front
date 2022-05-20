@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../../components/Navbar';
 import {useParams} from 'react-router-dom'
+import { CandyCard } from "../../components/CandyCard";
 
 export function VisualizacaoPersona(){
 
@@ -59,7 +60,7 @@ export function VisualizacaoPersona(){
 
         <div className="d-flex justify-content-center align-items-center">
             
-            <div className="justify-content-center align-items-center" style={{width: "48rem", backgroundColor:"rgba(255,255,255,0.7)", borderRadius: "30px"}} >
+            <CandyCard className="justify-content-center align-items-center" style={{width: "48rem", borderRadius: "30px"}} >
             
                 <div className='d-flex justify-content-center align-items-center rounded p-5' >
 
@@ -109,10 +110,8 @@ export function VisualizacaoPersona(){
                     </div>
                 
                 </div>
+            </CandyCard>
             </div>
-
-            </div>
-       
         </div>
         </>
     );

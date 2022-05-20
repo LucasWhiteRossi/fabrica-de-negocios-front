@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { api } from "../../api/api"
 import { useNavigate } from 'react-router-dom';
+import { CandyCard } from '../../components/CandyCard';
 
 export function CadastroModeloNegocio(){
 
@@ -62,7 +63,7 @@ async function handleConfirm(event){
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
         <h1 className="text-center" style={{color:"black"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
 
-        <div className="card p-3" style={{backgroundColor:"rgba(102, 16, 242,0.5)"}}>
+        <CandyCard>
         <form onSubmit={handleConfirm}>
         <br></br>
             <h2 className="text-center" style={{color:"#631354"}}>Nome do seu Negócio</h2>
@@ -527,7 +528,7 @@ async function handleConfirm(event){
                 <button type="submit" className="btn btn-primary">Gerar Negócio</button>
             
             </form>
-            </div>
+            </CandyCard>
             </div> 
         </>
     )

@@ -2,7 +2,7 @@ import { api } from "../../api/api"
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar } from '../../components/Navbar';
-
+import { CandyCard } from "../../components/CandyCard";
 
 export function CardsPersonas(){
 
@@ -48,7 +48,7 @@ export function CardsPersonas(){
             return (
             <>
             <div className="d-flex justify-content-center align-items-center">
-                <div className="d-flex justify-content-start rounded m-2" style={{width: "48rem", backgroundColor:"rgba(102, 16, 242,0.7)", borderRadius: "30px"}} >
+                <CandyCard className="d-flex justify-content-start rounded m-2" style={{width: "48rem", borderRadius: "30px"}} >
                     {
                         currentPersona.imagem && (
                             <div className='d-flex justify-content-start align-items-center rounded p-5' >
@@ -66,7 +66,7 @@ export function CardsPersonas(){
                             <button className="btn btn-danger m-2" onClick={()=>handleDelete(currentPersona._id)}>Apagar</button>
                         </div>
                     </div>
-                </div>
+                </CandyCard>
             </div>
             </>
         ) 

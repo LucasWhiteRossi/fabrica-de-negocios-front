@@ -3,7 +3,7 @@ import { Navbar } from '../../components/Navbar';
 import { api } from '../../api/api';
 import { useNavigate } from 'react-router-dom';
 import { AvatarSelector } from '../../components/AvatarSelector';
-
+import { CandyCard } from '../../components/CandyCard';
 
 export function CadastroPersona(){
 
@@ -62,7 +62,7 @@ async function handleConfirm(event){
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
         <h1 className="text-center" style={{color:"black"}}>CONSTRUIR PERSONA</h1>
         
-        <div className="card p-3" style={{backgroundColor:"rgba(102, 16, 242,0.5)", borderRadius: "20px"}}>
+        <CandyCard>
         
         {form.imagem && (<h2 className="text-center" style={{color:"#631354"}}>Foto Atual</h2>)}
         {form.imagem && (<div className="d-flex justify-content-center">
@@ -420,7 +420,7 @@ async function handleConfirm(event){
 
             <button type="submit" className="btn btn-primary">Gerar Persona</button>
             </form>
-            </div>
+            </CandyCard>
             </div>
         </>
 
