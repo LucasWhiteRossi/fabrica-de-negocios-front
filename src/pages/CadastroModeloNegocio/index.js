@@ -61,7 +61,7 @@ async function handleConfirm(event){
         <>
         <Navbar />
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-        <h1 className="text-center" style={{color:"black"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
+        <h1 className="text-center">CONSTRUIR MODELO DE NEGÓCIO</h1>
 
         <CandyCard>
         <form onSubmit={handleConfirm}>

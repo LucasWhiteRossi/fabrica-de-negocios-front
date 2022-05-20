@@ -37,9 +37,12 @@ export function CardsModeloNegocio(){
         <Navbar />
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
 
+        <h1 className="text-center" style={{color:"white"}}>MODELOS DE NEGÓCIOS</h1>
+        <div className="d-flex justify-content-center align-items-center">
+        <br></br>
         <Link to="/cadastro-modelo-negocio" className="btn btn-primary m-2 rounded">CRIAR NOVO MODELO DE NEGÓCIO</Link>
-
-        <h1 className="text-center" style={{color:"white"}}>MODELOS DE NEGÓCIOS CONSTRUÍDOS</h1>
+        <br></br>
+        </div>
         {negocio.map((currentNegocio) => {
             return (
             <>
