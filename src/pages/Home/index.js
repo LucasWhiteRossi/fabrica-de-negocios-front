@@ -14,7 +14,7 @@ export function Home(){
           </div>
           <div className="home-body">
             
-            <div className='d-flex justify-content-center align-items-center m-10' style={{backgroundColor:"rgba(171 184 255 / 18%)", width:"1000px", height:"auto"}}>
+            <div className='d-flex justify-content-center align-items-center m-10' style={{backgroundColor:"rgba(171 184 255 / 18%)", width:"1000px", height:"auto", marginTop:"50px"}}>
                 <div className='p-5'>
                     <div>
                         <br />

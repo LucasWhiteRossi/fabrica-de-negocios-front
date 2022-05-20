@@ -84,24 +84,6 @@ function handleConfirm(event){
     navigate("/gerenciar-personas");
 }
 
-async function handleConnect(event){
-    try{
-        await api.patch(`/persona/vincular-persona/${params.id}/${event}`);
-        setChangeConnection(false);
-    } catch(error){
-        console.log(error)
-    }
-}
-
-async function handleDisconnect(event){
-    try{
-        await api.patch(`/persona/desvincular-persona/${params.id}/${event}`);
-        setChangeConnection(false)
-    } catch(error){
-        console.log(error)
-    }
-}
-
     return (
         <>
         <Navbar />
@@ -110,14 +92,6 @@ async function handleDisconnect(event){
                 <br></br>
                     <h2 className="text-center" style={{color:"#631354"}}>Vincular Negocio</h2>
                 <br></br>
-            
-                {!userLoad && user.vinculoNegocio.filter((currentNegocio)=>{return currentNegocio.vinculoPersona.includes(params.id)}).map((currentNegocio) => {
-                    return (<CandyCard>
-                    {currentNegocio.nome &&<h1>{currentNegocio.nome}</h1>}
-                    <button onClick={()=>handleConnect(currentNegocio._id)} className="btn btn-primary">Vincular</button>
-                    <Link to={`/visualizacao-negocio/${currentNegocio._id}`} className="btn btn-primary">Visualizar</Link>
-                    </CandyCard>)
-                })}
             
             
                 
@@ -132,8 +106,8 @@ async function handleDisconnect(event){
                     <h1>{currentNegocio.nome}</h1>
                     </CandyCard>
                     )}
-                    <button onClick={()=>handleDisconnect(currentNegocio._id)} className="btn btn-danger">Desvincular</button>
                     <Link to={`/visualizacao-negocio/${currentNegocio._id}`} className="btn btn-primary">Visualizar</Link>
+                    <Link to={`/edit-modelo-negocio/${currentNegocio._id}`} className="btn btn-primary">Editar</Link>
                     </>
                     
                     )
