@@ -124,7 +124,7 @@ export function EditNegocio(){
                     {
                         currentPersona.imagem && (
                             <div className='d-flex justify-content-start align-items-center rounded p-5' >
-                                <img className="rounded" style={{width:"0.5el", height:"auto"}} src={require(`../../assets/avatars/${currentPersona.imagem}.jpg`)} alt={`${currentPersona.imagem}.jpg`}/>
+                                <img className="rounded" style={{width:"0.25el", height:"auto"}} src={require(`../../assets/avatars/${currentPersona.imagem}.jpg`)} alt={`${currentPersona.imagem}.jpg`}/>
                             </div>
                         )
                     }
@@ -154,7 +154,7 @@ export function EditNegocio(){
                     {
                         currentPersona.imagem && (
                             <div className='d-flex justify-content-start align-items-center rounded p-5' >
-                                <img className="rounded" style={{width:"0.5el", height:"auto"}} src={require(`../../assets/avatars/${currentPersona.imagem}.jpg`)} alt={`${currentPersona.imagem}.jpg`}/>
+                                <img className="rounded" style={{width:"0.25el", height:"auto"}} src={require(`../../assets/avatars/${currentPersona.imagem}.jpg`)} alt={`${currentPersona.imagem}.jpg`}/>
                             </div>
                         )
                     }
