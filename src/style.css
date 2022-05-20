@@ -1,13 +1,5 @@
-.home-body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-p{
-    text-align: justify;
-    text-justify: inter-word;
+body{
+    background-color: #bab0d7;
 }
 
 .btn-primary:hover {
