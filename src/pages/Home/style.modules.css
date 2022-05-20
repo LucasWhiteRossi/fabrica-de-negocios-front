@@ -2,6 +2,8 @@ body{
     background-color: #6b5edd;
 }
 
+
+
 .home-body{
     background-color: #ffffff;
     display: flex;
@@ -9,7 +11,15 @@ body{
     justify-content: center;
 }
 
+
+
 p{
     text-align: justify;
     text-justify: inter-word;
+}
+
+.como-usar{
+    background-color: #6e5ddf;
+    color: #ffffff; 
+    text-align: center;
 }
