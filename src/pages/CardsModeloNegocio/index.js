@@ -47,7 +47,7 @@ export function CardsModeloNegocio(){
             return (
             <>
             <div className="d-flex justify-content-center align-items-center">
-                <CandyCard className="d-flex justify-content-start rounded m-2" style={{width: "60%", borderRadius: "30px", flexDirection:"row"}} >
+                <CandyCard className="d-flex justify-content-start rounded m-2" style={{width: "100%", borderRadius: "30px", flexDirection:"row"}} >
                     <div className="d-flex align-items-center justify-content-center p-5">
                         <div>
                             <h5 className="card-title" style={{color:"#631354"}}>{currentNegocio.nome}</h5>
