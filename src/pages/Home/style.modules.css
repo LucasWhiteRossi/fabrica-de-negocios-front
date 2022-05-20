@@ -2,6 +2,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0;
+    height: 87vh;
+    font-weight: 100;
+    background: repeating-radial-gradient(#c1c3e2, #ffffff);
 }
 
 

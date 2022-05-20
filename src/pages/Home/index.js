@@ -18,7 +18,7 @@ export function Home(){
                 <div className='p-5'>
                     <div>
                         <br />
-                        <p style={{fontSize:"25px", color:"rgb(79 63 184)"}}><strong>A Fábrica de Negócio é uma ferramenta flexível e de fácil compreensão.</strong></p>
+                        <p style={{fontSize:"35px", color:"black"}}><strong>A Fábrica de Negócio é uma ferramenta flexível e de fácil compreensão.</strong></p>
                         <p style={{fontSize:"20px"}}>
                             Tenha uma visão estratégica do seu negócio, construindo Personas e Modelos de Negócios para que as suas estratégias possam ser implementada com sucesso.
                         </p>
