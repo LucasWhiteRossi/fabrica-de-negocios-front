@@ -10,17 +10,24 @@ export function Home(){
 
       <div className='homePage'>
           <Navbar />
+          <h1 style={{fontSize:"25px", color:"#631354"}}>Tenha uma visão estratégica do seu negócio, construindo Personas e Modelos de Negócios.</h1>
+
           <div className="home-body">
-       
-              <div className='d-flex justify-content-center align-items-center' style={{backgroundColor:"rgba(255,255,255, 0.75)", width:"1000px", height:"auto", margin:"120px"}}>
+              <div className='d-flex justify-content-center align-items-center' style={{backgroundColor:"rgba(255,255,255, 0.75)", width:"1000px", height:"auto", margin:"0px"}}>
                   <div className='p-5'>
                       <div>
-                          <h1 style={{fontSize:"0.50el", color:"#631354"}}>Tenha uma visão estratégica do seu negócio, construindo Personas e Modelos de Negócios de forma certeira para que as suas estratégias possam ser implementada com sucesso.</h1>
                           <br />
-                          <p style={{fontSize:"25px"}}> A Fábrica de Negócio é uma ferramenta flexível e de fácil compreensão. Com mais de 20 perguntas para você preencher e conseguir enxergar o seu negócio de forma mais clara. São diversas funcionalidades que farão o seu projeto criar forma.
-                          Vincule o seu modelo de negócio com as personas que você personalizou e entenda como você pode criar conteúdos e soluções mais atrativos e úteis para os seus clientes.
-                          Agilize e facilite o processo estratégico. Documente e edite sempre que necessário, sobretudo pela necessidade da constante validação dessas mudanças.
+                          <p style={{fontSize:"22px"}}>A Fábrica de Negócio é uma ferramenta flexível e de fácil compreensão.</p>
+                          <p style={{fontSize:"22px"}}>Com mais de 20 perguntas para você preencher e conseguir enxergar o seu negócio de forma mais clara. São diversas funcionalidades que farão o seu projeto criar forma.</p>
+                          <p style={{fontSize:"22px"}}>Agilize e facilite o processo estratégico. Documente e edite sempre que necessário, sobretudo pela necessidade da constante validação dessas mudanças.
                           Realize o seu cadastro e comece agora mesmo.</p>
+
+
+
+
+
+
+
                           <br />
                       </div>
                   </div>
