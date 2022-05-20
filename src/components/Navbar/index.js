@@ -27,17 +27,17 @@ export function Navbar() {
         <DropdownButton id="dropdown" title="MENU" variant="warning" className="m-2">
 
             <DropdownItem>
-              <Link  to="/gerenciar-negocio" style={{'textDecoration':'none', 'color':'red'}}>GERENCIAR MODELO DE NEGÓCIOS</Link>
+              <Link  to="/gerenciar-negocio" style={{'textDecoration':'none', 'color':'purple'}}>GERENCIAR MODELO DE NEGÓCIOS</Link>
             </DropdownItem>
 
             <DropdownItem>
-              <Link  to="/gerenciar-personas" style={{'textDecoration':'none', 'color':'red'}}>GERENCIAR PERSONAS</Link>
+              <Link  to="/gerenciar-personas" style={{'textDecoration':'none', 'color':'purple'}}>GERENCIAR PERSONAS</Link>
             </DropdownItem>
 
             <Dropdown.Divider />
 
             <DropdownItem>
-              <Link  to="/cadastro-modelo-negocio" style={{'textDecoration':'none', 'color':'red'}}>+ CRIAR MODELO DE NEGÓCIOS</Link>
+              <Link  to="/cadastro-modelo-negocio" style={{'textDecoration':'none', 'color':'purple'}}>+ CRIAR MODELO DE NEGÓCIOS</Link>
             </DropdownItem>
 
             <DropdownItem >
