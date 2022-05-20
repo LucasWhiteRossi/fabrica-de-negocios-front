@@ -10,7 +10,7 @@ export function Navbar() {
   const { loggedInUser } = useContext(AuthContext);
 
   return (
-    <nav class="navbar" style={{"backgroundColor":"yellow"}}>
+    <nav class="navbar" style={{"backgroundColor":"#ffc107"}}>
    
     <h1><Link to="/" style={{ textDecoration: "none", color:"white"}}>FÁBRICA DE NEGÓCIOS</Link></h1>
     
