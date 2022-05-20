@@ -62,7 +62,7 @@ async function handleConfirm(event){
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
         <h1 className="text-center" style={{color:"black"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
 
-        <div className="card p-3" style={{backgroundColor:"rgba(255,255,255,0.5)"}}>
+        <div className="card p-3" style={{backgroundColor:"rgba(102, 16, 242,0.5)"}}>
         <form onSubmit={handleConfirm}>
         <br></br>
             <h2 className="text-center" style={{color:"#631354"}}>Nome do seu Negócio</h2>
