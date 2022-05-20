@@ -1,14 +1,11 @@
-import { useState, useEffect, useContext } from 'react';
+import { useState, useEffect } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { api } from "../../api/api"
-import { useNavigate, useParams } from 'react-router-dom';
-import { AuthContext } from '../../contexts/authContext';
+import { useNavigate, useParams, Link } from 'react-router-dom';
 
 export function EditNegocio(){
 
     const params = useParams();
-    const authContext = useContext(AuthContext);
-    const { loggedInUser } = authContext;
     const navigate = useNavigate();
     
     const [data, setData] = useState({});
@@ -113,15 +110,16 @@ export function EditNegocio(){
             <>
             <Navbar />
             <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-            <h1 className="text-center" style={{color:"black"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
+            <h1 className="text-center" style={{color:"black"}}>EDITAR MODELO DE NEGÓCIO</h1>
                 <br></br>
                     <h2 className="text-center" style={{color:"#631354"}}>Vincular Persona</h2>
                 <br></br>
             
             {!userLoad && user.vinculoPersona.filter((currentPersona)=>{return currentPersona.vinculoNegocio!==params.id}).map((currentPersona) => {
                     return (<>
-                    <h1>{currentPersona.nome}</h1>
+                    {currentPersona && <h1>{currentPersona.nome}</h1>}
                     <button onClick={()=>handleConnect(currentPersona._id)} className="btn btn-primary">Vincular</button>
+                    <Link to={`/visualizacao-persona/${currentPersona._id}`} className="btn btn-primary">Visualizar</Link>
                     </>)
                 })}
             
@@ -130,8 +128,9 @@ export function EditNegocio(){
                 <br></br>
             {!userLoad && user.vinculoPersona.filter((currentPersona)=>{return currentPersona.vinculoNegocio===params.id}).map((currentPersona) => {
                     return (<>
-                    <h1>{currentPersona.nome}</h1>
+                    {currentPersona && <h1>{currentPersona.nome}</h1>}
                     <button onClick={()=>handleDisconnect(currentPersona._id)} className="btn btn-danger">Desvincular</button>
+                    <Link to={`/visualizacao-persona/${currentPersona._id}`} className="btn btn-primary">Visualizar</Link>
                     </>)
                 })}
             

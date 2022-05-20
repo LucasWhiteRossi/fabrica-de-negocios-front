@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Navbar } from '../../components/Navbar';
 import { useNavigate } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { AvatarSelector } from '../../components/AvatarSelector'
 import { api } from "../../api/api"
 
@@ -9,6 +9,9 @@ export function EditPersona(){
     const params = useParams();
 
     const navigate = useNavigate();
+    const [user, setUser] = useState({});
+    const [userLoad, setUserLoad] = useState(true);
+    const [changeConnection, setChangeConnection] = useState(true);
     const [data, setData] = useState({})
     const [form, setForm] = useState({
         imagem: "",
@@ -49,25 +52,22 @@ export function EditPersona(){
         fetchEdit();
     },[]);
 
+    useEffect(() => {
+        async function fetchUser() {
+            const response = await api.get(
+            `/user/profile`
+            );
+            setUser({...response.data});
+            setUserLoad(false);
+            setChangeConnection(true)
+        }
+        fetchUser();
+    },[changeConnection]);
+
     useEffect(()=>{
         setForm(data)
         console.log(data)
     },[data])
-
-   /*  useEffect(() => {
-        async function fetchEdit() {
-            const response = await api.get(
-            `/persona/personas/${params.id}`      
-            );
-            setData({...response.data});
-        }
-        fetchEdit();
-    },[]);
-
-    useEffect(()=>{
-        setForm(data)
-        console.log(data)
-    },[data]) */
 
 function handleChange(event){
     setForm({...form,[event.target.name]: event.target.value});
@@ -83,11 +83,57 @@ function handleConfirm(event){
     navigate("/gerenciar-personas");
 }
 
+async function handleConnect(event){
+    try{
+        await api.patch(`/persona/vincular-persona/${params.id}/${event}`);
+        setChangeConnection(false);
+    } catch(error){
+        console.log(error)
+    }
+}
+
+async function handleDisconnect(event){
+    try{
+        await api.patch(`/persona/desvincular-persona/${params.id}/${event}`);
+        setChangeConnection(false)
+    } catch(error){
+        console.log(error)
+    }
+}
+
     return (
         <>
         <Navbar />
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-        <h1 className="text-center" >CONSTRUIR PERSONA</h1>
+        <h1 className="text-center" >EDITAR PERSONA</h1>
+                <br></br>
+                    <h2 className="text-center" style={{color:"#631354"}}>Vincular Negocio</h2>
+                <br></br>
+            
+                {!userLoad && user.vinculoNegocio.filter((currentNegocio)=>{return currentNegocio.vinculoPersona.includes(params.id)}).map((currentNegocio) => {
+                    return (<>
+                    {currentNegocio.nome &&<h1>{currentNegocio.nome}</h1>}
+                    <button onClick={()=>handleConnect(currentNegocio._id)} className="btn btn-primary">Vincular</button>
+                    <Link to={`/visualizacao-negocio/${currentNegocio._id}`} className="btn btn-primary">Visualizar</Link>
+                    </>)
+                })}
+            
+            
+                <br></br>
+                    <h2 className="text-center" style={{color:"#631354"}}>Modelo de Negócio Vinculado</h2>
+                <br></br>
+                {!userLoad && user.vinculoNegocio.filter((currentNegocio)=>{return !currentNegocio.vinculoPersona.includes(params.id)}).map((currentNegocio) => {
+                    return (
+                    <>
+                    {currentNegocio.nome && <h1>{currentNegocio.nome}</h1>}
+                    <button onClick={()=>handleDisconnect(currentNegocio._id)} className="btn btn-danger">Desvincular</button>
+                    <Link to={`/visualizacao-negocio/${currentNegocio._id}`} className="btn btn-primary">Visualizar</Link>
+                    </>
+                    
+                    )
+                })}
+        
+        
         <div className="card p-3" style={{backgroundColor:"rgba(255,255,255,0.5)"}}>
         <form onSubmit={handleConfirm}>
             
@@ -241,7 +287,7 @@ function handleConfirm(event){
                 onChange={handleChange} 
                 />
             </div> 
-          
+        
             <div className="mb-3">
             <label for="rendaCadastro" className="form-label">Qual a <strong>renda mensal</strong> da sua persona?</label>
             <div className="input-group">
