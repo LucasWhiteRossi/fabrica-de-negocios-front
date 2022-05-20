@@ -8,7 +8,7 @@ export function CandyCard(props){
         );
     } else {
         return (
-            <div className="p-3 m-3" style={{backgroundColor:"rgba(121, 0, 223,0.4)", borderRadius: "20px"}}>
+            <div className="d-flex flex-row p-3 m-3" style={{backgroundColor:"rgba(121, 0, 223,0.4)", borderRadius: "20px"}}>
                 {props.children}
             </div>
         );
