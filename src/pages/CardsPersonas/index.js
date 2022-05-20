@@ -39,11 +39,16 @@ export function CardsPersonas(){
         <Navbar />
         {!isLoading && (
         <>
-                    <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
+        <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
 
-                    <Link to="/cadastro-persona" className="btn btn-primary m-2 rounded">CRIAR NOVA PERSONA</Link>
+        <h1 className="text-center" style={{color:"white"}}>PERSONAS</h1>
 
-        <h1 className="text-center" style={{color:"white"}}>PERSONAS CONSTRUÍDAS</h1>
+            <div className="d-flex justify-content-center align-items-center">
+            <br></br>
+            <Link to="/cadastro-persona" className="btn btn-primary m-2 rounded">CRIAR NOVA PERSONA</Link>
+            <br></br>
+            </div>
+
         {persona.map((currentPersona) => {
             return (
             <>
