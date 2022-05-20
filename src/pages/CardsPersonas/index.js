@@ -48,7 +48,7 @@ export function CardsPersonas(){
             return (
             <>
             <div className="d-flex justify-content-center align-items-center">
-                <CandyCard className="d-flex justify-content-start rounded m-2" style={{width: "48rem", borderRadius: "30px"}} >
+                <CandyCard className="d-flex justify-content-start rounded m-2" style={{width: "48rem", borderRadius: "30px", flexDirection:"row"}} >
                     {
                         currentPersona.imagem && (
                             <div className='d-flex justify-content-start align-items-center rounded p-5' >
@@ -59,7 +59,7 @@ export function CardsPersonas(){
                     <div className="d-flex align-items-center justify-content-center p-5">
                         <div>
                             <h5 className="card-title" style={{color:"#631354"}}>{currentPersona.nome}</h5>
-                            <h6 className="card-subtitle mb-2 text-muted">{currentPersona.idade}</h6>
+                            <h6 className="card-subtitle mb-2 text-muted" style={{color:"#1e1d1d"}}>{currentPersona.idade}</h6>
                             {currentPersona.historia &&(<p className="card-text">{currentPersona.historia.length<300?`${currentPersona.historia}`:`${currentPersona.historia.slice(0,300)} ...`}</p>)}
                             <Link to={`/visualizacao-persona/${currentPersona._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Visualizar</Link>
                             <Link to={`/edit-persona/${currentPersona._id}`} className="btn m-2" style={{backgroundColor:"#631354", color:"white"}}>Editar</Link>
