@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { DropdownButton, Dropdown }  from 'react-bootstrap'
 import DropdownItem from 'react-bootstrap/esm/DropdownItem';
 
+
 export function Navbar() {
 
   const { loggedInUser } = useContext(AuthContext);
@@ -12,7 +13,7 @@ export function Navbar() {
   return (
     <nav class="navbar" style={{"backgroundColor":"#6610f2"}}>
    
-    <h1><Link to="/" style={{ textDecoration: "none", color:"white"}}>FÁBRICA DE NEGÓCIOS</Link></h1>
+   <h1><Link to="/" style={{ textDecoration: "none", color:"white"}}>FÁBRICA DE NEGÓCIOS</Link></h1>
     
     {!loggedInUser &&(
     <div class="nav-items">
