@@ -140,7 +140,7 @@ export function EditNegocio(){
 
     
                 <br></br>
-                <h2 className="text-center" style={{color:"#631354"}}>Proposta de valor:</h2>
+                <h2 className="text-center" style={{color:"#631354"}}>Proposta de Valor</h2>
                 <br></br>
     
                 <div class="mb-3">
@@ -192,7 +192,7 @@ export function EditNegocio(){
                 </div> 
     
                 <br></br>
-                <h2 className="text-center" style={{color:"#631354"}}>Segmento de clientes:</h2>
+                <h2 className="text-center" style={{color:"#631354"}}>Segmento de Clientes</h2>
                 <br></br>
     
                 <div className="mb-3">
@@ -220,7 +220,7 @@ export function EditNegocio(){
                 </div>
     
                 <br></br>
-                <h2 className="text-center" style={{color:"#631354"}}>Relacionamento com clientes:</h2>
+                <h2 className="text-center" style={{color:"#631354"}}>Relacionamento com Clientes</h2>
                 <br></br>
     
     
@@ -313,7 +313,7 @@ export function EditNegocio(){
                 </div> 
                 
                 <br></br>
-                    <h2 className="text-center" style={{color:"#631354"}}>Canais de Entrega:</h2>
+                    <h2 className="text-center" style={{color:"#631354"}}>Canais de Entrega</h2>
                 <br></br>
     
                 <div className="mb-3">
@@ -357,7 +357,7 @@ export function EditNegocio(){
                 </div>
     
                     <br></br>
-                    <h2 className="text-center" style={{color:"#631354"}}>Fontes de Receitas:</h2>
+                    <h2 className="text-center" style={{color:"#631354"}}>Fontes de Receitas</h2>
                     <br></br>
     
                 <div className="mb-3">
@@ -410,7 +410,7 @@ export function EditNegocio(){
                 </div>
     
                 <br></br>
-                <h2 className="text-center" style={{color:"#631354"}}>Atividades Principais:</h2>
+                <h2 className="text-center" style={{color:"#631354"}}>Atividades Principais</h2>
                 <br></br>
     
                 <div className="mb-3">
@@ -438,7 +438,7 @@ export function EditNegocio(){
                 </div>
     
                 <br></br>
-                <h2 className="text-center" style={{color:"#631354"}}>Recursos:</h2>
+                <h2 className="text-center" style={{color:"#631354"}}>Recursos</h2>
                 <br></br>
     
     
@@ -467,7 +467,7 @@ export function EditNegocio(){
                 </div>
     
                 <br></br>
-                <h2 className="text-center" style={{color:"#631354"}}>Parceiros:</h2>
+                <h2 className="text-center" style={{color:"#631354"}}>Parceiros</h2>
                 <br></br>
     
     
@@ -523,7 +523,7 @@ export function EditNegocio(){
                 </div>
     
                 <br></br>
-                <h2 className="text-center" style={{color:"#631354"}}>Estrutura de Curso:</h2>
+                <h2 className="text-center" style={{color:"#631354"}}>Estrutura de Curso</h2>
                 <br></br>
     
     
