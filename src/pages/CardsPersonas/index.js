@@ -48,7 +48,7 @@ export function CardsPersonas(){
             return (
             <>
             <div className="d-flex justify-content-center align-items-center">
-                <CandyCard className="d-flex justify-content-start rounded m-2" style={{width: "48rem", borderRadius: "30px", flexDirection:"row"}} >
+                <CandyCard className="d-flex justify-content-start flex-row rounded m-2" style={{width: "48rem", borderRadius: "30px", flexDirection:"row"}} >
                     {
                         currentPersona.imagem && (
                             <div className='d-flex justify-content-start align-items-center rounded p-5' >
