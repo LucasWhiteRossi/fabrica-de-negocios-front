@@ -41,7 +41,7 @@ export function CardsPersonas(){
         <>
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
 
-        <h1 className="text-center" style={{color:"white"}}>PERSONAS</h1>
+        <h1 className="text-center" style={{color: "black", fontFamily: "sans-serif", fontSize: "40px",marginTop: "30px"}}>PERSONAS</h1>
 
             <div className="d-flex justify-content-center align-items-center">
             <br></br>

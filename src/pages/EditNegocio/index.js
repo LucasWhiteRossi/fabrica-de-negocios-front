@@ -111,7 +111,7 @@ export function EditNegocio(){
             <>
             <Navbar />
             <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-            <h1 className="text-center" style={{color:"black"}}>EDITAR MODELO DE NEGÓCIO</h1>
+            <h1 className="text-center" style={{color: "black", fontFamily: "sans-serif", fontSize: "40px",marginTop: "30px"}}>EDITAR MODELO DE NEGÓCIO</h1>
                 <br></br>
                     <h2 className="text-center" style={{color:"#631354"}}>Vincular Persona</h2>
                 <br></br>

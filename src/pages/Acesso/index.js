@@ -6,7 +6,7 @@ export function Acesso(){
     return (
         <>
             <Navbar/>
-            <h1 className="text-center" style={{color: "black", fontFamily: "sans-serif", marginTop: "30px"}}>Identificação</h1>
+            <h1 className="text-center" style={{color: "black", fontFamily: "sans-serif", fontSize: "40px",marginTop: "30px"}}>Identificação</h1>
             <div className="d-flex flex-row justify-content-around m-5">
                 <Signup/>
                 <Login/>
