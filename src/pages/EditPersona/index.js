@@ -88,7 +88,7 @@ function handleConfirm(event){
         <>
         <Navbar />
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-        <h1 className="text-center" >EDITAR PERSONA</h1>
+        <h1 className="text-center" style={{color: "black", fontFamily: "sans-serif", fontSize: "40px",marginTop: "30px"}}>EDITAR PERSONA</h1>
                 <br></br>
                     <h2 className="text-center" style={{color:"#631354"}}>Vincular Negocio</h2>
                 <br></br>
