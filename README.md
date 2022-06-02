@@ -8,7 +8,7 @@ Tenha uma visão estratégica do seu negócio, construindo Personas e Modelos de
 
 Deploy do projeto: [ Fábrica de personas ]( https://fabrica-de-negocios.netlify.app/ )
 
-Apresentação: [ Fábrica de Negócios Apresentação ]( https://www.canva.com/design/DAE_Le992tI/A6VJHH8qYjXvX97PUQVtmg/edit?utm_content=DAE_Le992tI&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton )
+Apresentação: [ Fábrica de Negócios Apresentação ]( https://www.canva.com/design/DAE_Le992tI/i9QFY2l46OnXb3cWEDwmDA/view?utm_content=DAE_Le992tI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#1 )
 
 ---------
 
