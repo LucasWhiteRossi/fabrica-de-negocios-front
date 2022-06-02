@@ -6,7 +6,7 @@ Tenha uma visão estratégica do seu negócio, construindo Personas e Modelos de
 
 ---------
 
-Deploy do projeto: [ Fábrica de personas ]( https://fabrica-de-negocios.netlify.app/ )
+Deploy do projeto: [ Fábrica de Negócios ]( https://fabrica-de-negocios.netlify.app/ )
 
 Apresentação: [ Fábrica de Negócios Apresentação ]( https://www.canva.com/design/DAE_Le992tI/i9QFY2l46OnXb3cWEDwmDA/view?utm_content=DAE_Le992tI&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink#1 )
 
@@ -18,7 +18,7 @@ Lucas Rossi: [Linkedin](https://www.linkedin.com/in/lucaswhiterossi/) | [github]
 
 Priscila Azevedo: [Linkedin](https://www.linkedin.com/in/priscila-azevedo-83126495/) | [github](https://github.com/Priscilacastroa)
 
-Renata Siqueira: [Linkedin](https://www.linkedin.com/in/renatasiqueirass/) | [github](https://github.com/renatasiqueira)
+Renata Siqueira: [Linkedin](https://www.linkedin.com/in/renatabsiqueira/) | [github](https://github.com/renatasiqueira)
 
 --------------
 
