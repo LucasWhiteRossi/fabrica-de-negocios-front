@@ -3,6 +3,7 @@ import { Navbar } from '../../components/Navbar';
 import { api } from "../../api/api"
 import { useNavigate, useParams, Link } from 'react-router-dom';
 import { CandyCard } from '../../components/CandyCard';
+import cardNegocios from '../../assets/img/titulo_modelonegocios.png'
 
 export function EditNegocio(){
 
@@ -111,7 +112,11 @@ export function EditNegocio(){
             <>
             <Navbar />
             <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-            <h1 className="text-center" style={{color: "black", fontFamily: "sans-serif", fontSize: "40px",marginTop: "30px"}}>EDITAR MODELO DE NEGÓCIO</h1>
+
+            <div className="d-flex justify-content-center align-items-center">
+                <img src={cardNegocios} alt="Título Modelo de Negócios" style={{width:"450px",height:"auto", marginBottom:"15px"}}/>
+            </div>
+
                 <br></br>
                     <h2 className="text-center" style={{color:"#631354"}}>Vincular Persona</h2>
                 <br></br>

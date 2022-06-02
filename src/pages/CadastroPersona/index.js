@@ -4,6 +4,7 @@ import { api } from '../../api/api';
 import { useNavigate } from 'react-router-dom';
 import { AvatarSelector } from '../../components/AvatarSelector';
 import { CandyCard } from '../../components/CandyCard';
+import tituloConstruirPersona from '../../assets/img/titulo_construirpersona.png'
 
 export function CadastroPersona(){
 
@@ -60,7 +61,10 @@ async function handleConfirm(event){
         <>
         <Navbar />
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-        <h1 className="text-center" style={{color: "black", fontFamily: "sans-serif", fontSize: "40px",marginTop: "30px"}}>CONSTRUIR PERSONA</h1>
+        
+            <div className="d-flex justify-content-center align-items-center">
+                <img src={tituloConstruirPersona} alt="Título Construir Persona" style={{width:"450px",height:"auto", marginBottom:"15px"}}/>
+            </div>
         
         <CandyCard>
         

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { Navbar } from '../../components/Navbar';
 import utilizar  from "../../assets/img/pag_secundaria.png"
+import comoUtilizar from "../../assets/img/titulo_comoutilizar.png"
 
 
 export function ComoUtilizar() {
@@ -11,7 +12,9 @@ export function ComoUtilizar() {
 
             <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
 
-                <h1 className="text-center" style={{color: "black", fontFamily: "sans-serif", fontSize: "40px",marginTop: "30px"}}>COMO UTILIZAR</h1>
+                <div className="d-flex justify-content-center align-items-center">
+                    <img src={comoUtilizar} alt="Título Como Utilizar" style={{width:"450px",height:"auto", marginBottom:"15px"}}/>
+                </div>
 
                 <div className="d-flex justify-content-center align-items-center">
                     <div className="justify-content-center align-items-center text-justify p-5" style={{width: "48rem", backgroundColor:"rgba(201,153,242)", borderRadius: "30px"}} >

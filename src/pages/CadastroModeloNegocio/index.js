@@ -3,6 +3,7 @@ import { Navbar } from '../../components/Navbar';
 import { api } from "../../api/api"
 import { useNavigate } from 'react-router-dom';
 import { CandyCard } from '../../components/CandyCard';
+import tituloNegocios from '../../assets/img/titulo_construirmodelo.png'
 
 export function CadastroModeloNegocio(){
 
@@ -61,7 +62,10 @@ async function handleConfirm(event){
         <>
         <Navbar />
         <div style={{margin: "25px", padding: "0", boxSizing: "border-box"}}>
-        <h1 className="text-center" style={{color: "black", fontFamily: "sans-serif", fontSize: "40px",marginTop: "30px"}}>CONSTRUIR MODELO DE NEGÓCIO</h1>
+        
+            <div className="d-flex justify-content-center align-items-center">
+                <img src={tituloNegocios} alt="Título Construir Modelo de Negócios" style={{width:"450px",height:"auto", marginBottom:"15px"}}/>
+            </div>
 
         <CandyCard>
         <form onSubmit={handleConfirm}>
